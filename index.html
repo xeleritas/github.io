@@ -1,0 +1,2511 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<style>
+body {font-family: helvetica;}
+
+/* Style the tab */
+.tab {
+	  overflow: hidden;
+	  border: 0px solid #ccc;
+	  background-color: #f1f1f1;
+}
+/* Style the buttons inside the tab */
+.tab button {
+	  background-color: inherit;
+	  float: left;
+	  border: none;
+	  outline: none;
+	  cursor: pointer;
+	  padding: 1px 1px;
+	  transition: 0.5s;
+	  font-size: 11px;
+}
+/* Change background color of buttons on hover */
+.tab button:hover {
+	background-color: #ddd;
+}
+/* Create an active/current tablink class */
+.tab button.active {
+	background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+	  display: none;
+	  padding: 4px 4px;
+	  -webkit-animation: fadeEffect 1s;
+	  animation: fadeEffect 1s;
+}
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+	  from {opacity: 0;}
+	  to {opacity: 1;}
+}
+@keyframes fadeEffect {
+	  from {opacity: 0;}
+	  to {opacity: 1;}
+}
+</style>
+
+<style>
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 12px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+</style>
+
+<body>
+<table  style="width:99%" > 
+	<tr >
+		<td >
+			<div id="xdivxxx" >
+				<br>
+					<img src="blnk.png" > 
+					"To obtain ... <br>
+			</div>
+		</td>
+	</tr >	
+</table > 
+		
+<div class="tab" style="width:99%" >
+  <button class="tablinks" onclick="openPage(event, 'pg1')"><img src="1start.png" onclick="myfuncxxx()" > <br > Start Here </button>
+  <button class="tablinks" onclick="openPage(event, 'pg2')"><img src="1dtp.png" > <br> DtP </button>
+  <button class="tablinks" onclick="openPage(event, 'pg3')"> <img src="1ctp.png"> <br> CtP </button>
+  <button class="tablinks" onclick="openPage(event, 'pg4')"><img src="1paper.png"> <br> Paper </button>
+  <button class="tablinks" onclick="openPage(event, 'pg5')"><img src="1digital.png"> <br> Digital </button>  
+  <button class="tablinks" onclick="openPage(event, 'pg6')"><img src="1offset.png"> <br> Offset </button> 
+  
+  <button class="tablinks" onclick="openPage(event, 'pg8')"><img src="1lamination.png"> <br> Laminate </button>
+  <button class="tablinks" onclick="openPage(event, 'pg9')"><img src="1diecut.png"> <br> Diecut </button>  
+  <button class="tablinks" onclick="openPage(event, 'pg10')"><img src="1bindery.png"> <br> Bindery </button> 
+  <button class="tablinks" onclick="openPage(event, 'pg11')"><img src="1cutter.png"> <br> Cutter </button> 
+  <button class="tablinks" onclick="openPage(event, 'pg12')"><img src="1end.png"> <br> End </button> 
+</div>
+
+
+<div id="pg1" class="tabcontent">
+<br>
+
+		<a class="n22"> Job Info </a> <br>	
+
+<table style="width:88%" >		
+	<tr>
+		<td style="width:8%; vertical-align:top" >	
+			...	
+		</td>
+		<td style="width:55%; vertical-align:top; border:2px solid #4DFFF7" >
+			Open: <input type="file" id="fileToLoad" > <br>
+			<input type="button" onclick="loadFileAsText()" value="loadFileAsText" style="width:8em;height:3em">  ,,,		
+			<input type="button" id="openOldSession" onclick="openOldSession()" value="oOs"style="width:3em;height:3em"> 
+
+			<br>
+				jobName
+				<input type="text" id="jobName" aria-label="" name="enput[]" style="width:9em;height:2em">	
+				sessionDate
+				<input type="text" id="sessionDate" aria-label="" name="enput[]" style="width:4em;height:2em"> <br>	
+				client
+				<input type="text" id="client" aria-label="" name="enput[]" style="width:22em;height:2em"> <br>	
+
+				width
+				<input type="text" id="sizeWidth" aria-label="" name="enput[]" style="width:6em;height:2em"> 
+				x height
+				<input type="text" id="sizeHeight" aria-label="" name="enput[]" style="width:6em;height:2em"> 
+<br>
+				ggg
+				<input type="text" id="shit" aria-label="" name="enput[]" style="width:6em;height:2em"> 
+				ggg
+				<input type="text" id="shit2" aria-label="" name="enput[]" style="width:6em;height:2em"> 
+
+				<br>
+				test - enable a radio via val of textbox
+			<input type="button" onclick="enable_a_radio()" style="width:2em;height:2em"> 				
+				<br>
+
+		</td>
+		<td style="text-align:left; vertical-align:top; border:2px solid #4DFFF7" >	
+			<br>
+				<input id="01" class="n8" name="errorId" value="" /> <br>
+				<input id="02" class="n8" name="errorId" value="" /> <br>
+				<input id="03" class="n8" name="errorId" value="" /> <br>
+				<input id="04" class="n8" name="errorId" value="" /> <br>
+				<input id="05" class="n8" name="errorId" value="" /> <br>
+				<input id="06" class="n8" name="errorId" value="" /> <br>
+				<input id="07" class="n8" name="errorId" value="" /> <br>
+				<br>
+					<input type="button" onclick="mov01()" value="mov01"style="width:6em;height:3em"> 
+					<input type="button" onclick="mov02()" value="mov02"style="width:6em;height:3em"> <br>
+					.SaveAss
+				<input type="text" id="inputFileNameToSaveAs" value=" " style="width:8em;height:2em"> 			
+			<input type="button" id="save" onclick="saveTextAsFile()" value="saveTextAsFile" style="width:6em;height:2em">		
+		</td>
+		</tr>
+</table>
+	
+	
+
+
+
+<br>
+<a class="n22"> Job Kind </a> <br>	
+
+<table style="width:99%" > 
+
+	<tr class="n10">	
+		<td class="n10" style="width:5% " >
+			Click on <br> image  <br>
+			<img src="arrowright.png">
+		</td>
+		
+		<td style="width:10%; text-align:center; border:2px solid #FF1493" >
+			<img src="2card.png" onclick="jkcard()" onmouseover="" style="cursor:pointer" > <br> 			
+			Card,Tag 
+		</td>  				
+		<td style="width:10%; text-align:center; border:2px solid #FF1493" >
+			<img src="2pad.png" onclick="jkpad()" onmouseover="" style="cursor:pointer" > <br>  		
+			Pad 
+		</td>					
+		<td style="width:10%; text-align:center; border:2px solid #FF1493" >
+			<img src="2letterhead.png" onclick="jkletterhead()" onmouseover="" style="cursor:pointer" > <br>   			   
+			Letterhead 
+		</td>					
+		<td style="width:10%; text-align:center; border:2px solid #FF1493" >
+			<img src="2poster.png" onclick="jkposter()" onmouseover="" style="cursor:pointer" > <br>  
+			Flyer,Poster 
+		</td>									
+		<td style="width:10%; text-align:center; border:2px solid #FF1493" >
+			<img src="2ply.png" onclick="jkply()" onmouseover="" style="cursor:pointer" > <br>  
+			Booklet 
+		</td> 
+		<td style="width:10%; text-align:center; border:2px solid #FF1493" >
+			<img src="2folder.png" onclick="jkfolder()" onmouseover="" style="cursor:pointer" > <br>  
+			Folder 
+		</td>				
+		<td style="width:10%; text-align:center; border:2px solid #FF1493" >
+			<img src="2envelope.png" onclick="jkenvelope()" onmouseover="" style="cursor:pointer" > <br>  
+			Envelope 
+		</td>				
+		<td style="width:10%; text-align:center; border:2px solid #FF1493" >
+			<img src="2box.png" onclick="jkbox()" onmouseover="" style="cursor:pointer" > <br>  
+			Box 
+		</td>									
+		<td style="width:10%; text-align:center; border:2px solid #FF1493" >
+			<img src="2page.png" onclick="jk_pages()" onmouseover="" style="cursor:pointer" > <br>  
+			Pages 
+		</td>								
+	</tr>		
+
+	<tr class="n12">
+		<td style=" text-align:center" >  
+			..
+		</td>
+		
+		<td colspan="4" style="text-align:center; border:2px solid #4DFFF7" > 
+			Plain 
+		</td>
+		<td style="text-align:center; border:2px solid #4DFFF7" >
+			Ply 
+		</td>
+		<td colspan="3" style="text-align:center; border:2px solid #4DFFF7" >
+			Containers 
+		</td>
+		<td style="text-align:center; border:2px solid #4DFFF7" >
+			Page-imposition 
+		</td>	
+	</tr>
+
+	<tr>
+		<td>
+			.
+		</td>
+		<td colspan="9" class="i14" style="text-align:center" >
+			Simple <img src="simplecomplicado.png"> Complicado <br>
+		</td>
+	</tr>
+
+	<tr>
+		<td colspan="9" class="i14" style="text-align:center" >
+			.
+		</td>
+	<tr >
+		
+	<tr class="n8">
+		<td>
+			.
+		</td>
+		<td   >
+			<input type="text" id="vvv()" onclick="" class="n8" style="width:3em" > <br>
+			<input type="radio" id="complex1" name="jk()" onclick="" > complex1
+		</td>
+		<td   >
+			<input type="text" id="vvv()" onclick="" class="n8" style="width:3em" > <br>
+			<input type="radio" id="complex2" name="jk()" onclick="" > complex2
+		</td>
+		<td   >
+			<input type="text" id="vvv()" onclick="" class="n8" style="width:3em" > <br>
+			<input type="radio" id="complex3" name="jk()" onclick="" > complex3
+		</td>
+		<td   >
+			<input type="text" id="vvv()" onclick="" class="n8" style="width:3em" > <br>
+			<input type="radio" id="complex4" name="jk()" onclick="" > complex4
+		</td>
+		<td   >
+			<input type="text" id="vvv()" onclick="" class="n8" style="width:3em" > <br>
+			<input type="radio" id="complex5" name="jk()" onclick="" > complex5
+		</td>
+		<td   >
+			<input type="text" id="vvv()" onclick="" class="n8" style="width:3em" > <br>
+			<input type="radio" id="complex6" name="jk()" onclick="" > complex6
+		</td>
+		<td   >
+			<input type="text" id="vvv()" onclick="" class="n8" style="width:3em" > <br>
+			<input type="radio" id="complex7" name="jk()" onclick="" > complex7
+		</td>
+		<td   >
+			<input type="text" id="vvv()" onclick="" class="n8" style="width:3em" > <br>
+			<input type="radio" id="complex8" name="jk()" onclick="" > complex8
+		</td>
+		<td   >
+			<input type="text" id="vvv()" onclick="" class="n8" style="width:3em" > <br>
+			<input type="radio" id="complex9" name="jk()" onclick="" > complex9
+		</td>		
+		
+		
+		<td style="width:2%" >
+			.
+		</td>
+		<td >
+			<input type="text" id="vvv" style="width:3em;height:2em">319
+		</td>
+	</tr>
+
+
+	
+</table>	
+<br>
+
+
+
+<table style="width:88%"> 
+		<br>
+		<a class="n20"> Quantity 'Schema' </a> <br>
+	
+	<tr> 	
+		<td class="n10" style="width:5%;text-align:left" >
+			Re- <br> arranged  <br>
+			<img src="arrowright.png">
+		</td>
+		
+		<td style="width:10%; text-align:center; " >
+			<input type="checkbox" name="dtp" id="Chk_card" style="width:22px;height:22px">
+				<img src="2card.png" style="width:28px;height:44px">
+		</td>  														
+		<td style="width:10%; text-align:center;  " >
+			<input type="checkbox" name="dtp" id="Chk_poster" style="width:22px;height:22px">
+				<img src="2poster.png" style="width:28px;height:44px">
+		</td>										
+		<td style="width:10%; text-align:center;  " >
+			<input type="checkbox" name="dtp" id="Chk_folder" style="width:22px;height:22px">
+				<img src="2folder.png" style="width:28px;height:44px">
+		</td>									
+		<td style="width:10%; text-align:center;  " >
+			<input type="checkbox" name="dtp" id="Chk_box" style="width:22px;height:22px">
+				<img src="2box.png" style="width:28px;height:44px">
+		</td>
+		<td style="width:10%; text-align:center;  " >
+			<input type="checkbox" name="dtp" id="Chk_pad" style="width:22px;height:22px">
+				<img src="2pad.png" style="width:28px;height:44px">
+		</td>
+		<td style="width:10%; text-align:center;  " >
+			<input type="checkbox" name="dtp" id="Chk_letterhead" style="width:22px;height:22px">
+				<img src="2letterhead.png" style="width:28px;height:44px">
+		</td>	
+		<td style="width:10%; text-align:center;  " >
+			<input type="checkbox" name="dtp" id="Chk_envelope" style="width:22px;height:22px">
+				<img src="2envelope.png" style="width:28px;height:44px">
+		</td>			
+		<td style="width:10%; text-align:center;  " >
+			<input type="checkbox" name="dtp" id="Chk_ply" style="width:22px;height:22px">
+				<img src="2ply.png" style="width:28px;height:44px">
+		</td>				
+		<td style="text-align:center; " >
+			<input type="checkbox" name="dtp" id="Chk_pages" style="width:22px;height:22px">
+				<img src="2page.png" style="width:28px;height:44px">
+		</td>							
+	</tr>
+	
+	<tr>
+		<td > 
+			.
+		</td>
+		<td colspan="4" style="text-align:center"> 
+			<img src="bracketshort.png">
+		</td>
+		<td colspan="4" style="text-align:center"> 
+			<img src="bracketshorter.png">
+		</td>
+		<td style="text-align:center"> 
+			<img src="bracketshortest.png"> 
+		</td>
+	</tr>	
+
+	<tr>
+		<td class="n10" >
+			Enter a <br> value <br>
+			<img src="arrowright.png"> <br>
+			~398
+		</td>
+		<td colspan="4" style="text-align:right; vertical-align:top"> 
+			<input type="number" id="qtyPieces" class="n24" onchange="computeQtyTotal()" style="width:6em;height:2em" >
+			<input type="radio" name="pcs" id="chkPieces" style="width:22px;height:22px"> Pieces
+			<br>
+		</td>
+		<td colspan="4" style="text-align:center; vertical-align:bottom"> 
+			<br>
+			<input type="radio" name="pcs" id="chkBklt" style="width:22px;height:22px">  Booklet  
+			<input type="radio" name="pcs" id="chkPad" style="width:22px;height:22px">  Pad 
+			<input type="radio" name="pcs" id="chkReams" style="width:22px;height:22px">  Ream,500s,Box
+			<br>
+				<input type="number" id="qtySets"  value="1" style="width:44px;height:22px" > Sets
+			 x 	<input type="number" id="qtyPly" class="n22" value="1" style="width:44px;height:28px" > Ply			
+		</td>
+		<td style="text-align:center; vertical-align:bottom"> 
+			<input type="radio" name="pcs" id="chkPages" style="width:22px;height:22px"> Pages <br>
+			<input type="number" id="qtyPages" class="n22" value="1" style="width:55px;height:28px" >
+		</td>
+	</tr>	
+	
+	<tr>
+		<td class="n10" style="text-align:left" >
+			422
+		</td>
+ 		<td colspan="4" style="text-align:right" >
+			 
+		</td>	
+		<td colspan="5" style="text-align:center" >		
+			<input type="text" id="qtyTotal" class="n16" onchange="xxx()" style="width:6em;height:33px">			
+			<i> (imp.) </i>		
+			<input type="button" id="computeQtyTotal" class="n12" onclick="computeQtyTotal()" value="run" style="width:3em;height:2em" >																	
+		</td>		 
+	</tr>
+
+	<tr>
+		<td class="n10" style="text-align:left" >
+			439 <br> use <br> slider <br>
+			<img src="gray.png">
+		</td>	
+		<td colspan="9" style="text-align:center" >
+			<br>
+			<input type="range" min="1" max="1234" value="1" class="slider" id="myRange" style="width:99%" > <br>
+			<br>
+		</td>
+	</tr>
+</table> 
+<br>
+
+
+
+<table style="width:88%" class="n12" >
+
+		<a class="n20"> Magne </a> 
+	<tr>
+		<td class="n9" style="width:5%;  " >
+			Take <br> note <br>
+			<img src="arrowright.png"> <br>
+		</td>	
+		<td style="width:14%; text-align:center; " >  
+			<img src="magni1.png"> <br> 
+				<input type="radio" name="magni" id="rad0" style="width:22px;height:22px"> 
+					<a class="n12"> vvSmall </a>
+		</td>		
+		<td style="width:14%; text-align:center; " > 
+			<img src="magni2.png"> <br> 
+				<input type="radio" name="magni" id="rad1" style="width:22px;height:22px"  > 
+					<a class="n12"> vSmall </a>
+		</td>		
+		<td style="width:14%; text-align:center; " > 
+			<img src="magni3.png"> <br> 
+				<input type="radio" name="magni" id="rad2" style="width:22px;height:22px"> 
+					<a class="n12"> Small </a>
+		</td>			
+		<td style="width:14%; text-align:center; " > 
+			<img src="magni4.png"> <br> 
+				<input type="radio" name="magni" id="rad3" style="width:22px;height:22px">
+					<a class="n12"> Medium </a>
+		</td>		
+		<td style="width:14%; text-align:center; " > 
+			<img src="magni5.png"> <br> 
+				<input type="radio" name="magni" id="rad4" style="width:22px;height:22px"> 
+					<a class="n12"> Large </a>
+		</td>			
+		<td style="width:14%; text-align:center; " >  
+			<img src="magni6.png"> <br> 
+				<input type="radio" name="magni" id="rad5" style="width:22px;height:22px">  
+					<a class="n12"> vLarge </a>
+		</td>
+		<td style="text-align:center; " >  
+			<img src="magni7.png"> <br> 
+				<input type="radio" name="magni" id="rad6" style="width:22px;height:22px">  
+					<a class="n12"> vvLarge </a>
+		</td>		
+	</tr>				
+
+	<tr>
+		<td style="width:6%;  " > 
+			.
+		</td>	
+		<td style="text-align:center; border:2px solid #4DFFF7"> 
+			<input type="radio" name="rad_digOff" id="rad_digitalrgb" style="width:18px;height:18px" checked> <br>  
+				Digital=Rgb
+		</td>		
+		<td colspan="6" style="text-align:center; border:2px solid #4DFFF7"> 
+			<input type="radio" name="rad_digOff" id="rad_offsetcmyk" style="width:18px;height:18px"> <br>   
+				Offset = Cmyk layout
+		</td>	
+	</tr>
+
+	<tr>
+		<td colspan="2" class="n10" style="width:5%" >
+			....
+		</td>
+		<td colspan="2" style="text-align:center; border:2px solid #4DFFF7"> 
+			<input type="radio" name="rad_WttFb" id="rad_wtt" style="width:18px;height:18px">   
+				Work & Turn/Tumble
+		</td>		
+		<td colspan="5" style="text-align:center; border:2px solid #4DFFF7">  
+			<input type="radio" name="rad_WttFb" id="rad_fb_prntng" style="width:18px;height:18px" checked>   
+				Front & Back printing
+		</td>	
+	</tr>	
+	<tr>
+		<td colspan="2" class="n10" style="width:5%" >
+			... <br>
+		</td>
+		<td colspan="2" style="text-align:center; border:2px solid #4DFFF7"> 
+				<img src="arrowright.png">
+			<input type="radio" name="fbfb" id="FequalB" style="width:22px;height:22px" >
+				<a class="n18"> Front = Back </a> <br>
+		</td>		
+		<td colspan="5" style="text-align:center; border:2px solid #4DFFF7">  
+				<img src="arrowright.png">	
+			<input type="radio" name="fbfb" id="FnotequalB" style="width:22px;height:22px" >
+				<a class="n18"> Front ≠ Back </a> <br>
+		</td>	
+	</tr>		
+<br>
+
+<script>
+	function computeQtyTotal() {		
+		var pcs = document.getElementById("qtyPieces").value;
+		var sets = document.getElementById("qtySets").value;
+		var ply = document.getElementById("qtyPly").value;
+			var pages = document.getElementById("qtyPages").value;
+			document.getElementById("qtyTotal").value = pcs * sets * ply * pages ;			
+	}
+</script>
+	
+<script>
+//magni slider
+</script>
+
+	<tr>
+		<td colspan="2" > 
+			<br>
+			<a class="n20"> Ink colors </a> 
+		</td>	
+	</tr>	
+
+	<tr>		
+		<td colspan="2" class="n10" style="width:5%" >
+			ignore, if pages (see ____) <br>
+		</td>		
+		<td colspan="2" style="text-align:left; border:2px solid #4DFFF7"> 
+			Front side: <br>
+			<input type="checkbox" name="wttf" id="fb_black"  onclick="fb_black()" style="width:22px;height:22px">  Black <br>
+			<input type="checkbox" name="wttf" id="fb_cyan" onclick="fb_cyan()" style="width:22px;height:22px"> Cyan / 2nd col <br>
+			<input type="checkbox" name="wttf" id="fb_magenta" onclick="fb_magenta()" style="width:22px;height:22px"> Magenta / 3rd col <br>
+			<input type="checkbox" name="wttf" id="fb_yellow" onclick="fb_yellow()" style="width:22px;height:22px"> Yellow / 4th col 
+		</td>		
+		<td colspan="2" style="text-align:left; border:2px solid #4DFFF7"> 
+			Back side: <br>
+			<input type="checkbox" name="wttf" id="fnotb_black" style="width:22px;height:22px">  Black <br>
+			<input type="checkbox" name="wttf" id="fnotb_cyan" style="width:22px;height:22px"> Cyan / 2nd col <br>
+			<input type="checkbox" name="wttf" id="fnotb_magenta" style="width:22px;height:22px"> Magenta / 3rd col <br>
+			<input type="checkbox" name="wttf" id="fnotb_yellow" style="width:22px;height:22px"> Yellow / 4th col
+		</td>
+		<td style="width:3%" >
+			...
+		</td>
+		<td style="text-align:center; border:2px solid #4DFFF7"> 
+			<input id="nume" style="width:22px;height:33px"> 
+			<br>
+			--------
+			<br>
+			<input id="deno" style="width:22px;height:33px"> 
+		</td>	
+	</tr>			
+</table>    
+<br>
+
+<script> 
+      function fb_black() {  
+          if(document.getElementById('FequalB').checked) { 
+              document.getElementById("fnotb_black").checked = document.getElementById("fb_black").checked ;
+          } 
+          else { 
+              document.getElementById("disp").innerHTML = "Not one selected"; 
+          } 
+      } 
+      function fb_cyan() {  
+          if(document.getElementById('FequalB').checked) { 
+              document.getElementById("fnotb_cyan").checked = document.getElementById("fb_cyan").checked ;
+          } 
+          else { 
+              document.getElementById("disp").innerHTML = "Not one selected"; 
+          } 
+      } 
+      function fb_magenta() {  
+          if(document.getElementById('FequalB').checked) { 
+              document.getElementById("fnotb_magenta").checked = document.getElementById("fb_magenta").checked ;
+          } 
+          else { 
+              document.getElementById("disp").innerHTML = "Not one selected"; 
+          } 
+      } 
+      function fb_yellow() {  
+          if(document.getElementById('FequalB').checked) { 
+              document.getElementById("fnotb_yellow").checked = document.getElementById("fb_yellow").checked ;
+          } 
+          else { 
+              document.getElementById("disp").innerHTML = "Not one selected"; 
+          } 
+      } 	  
+</script> 
+
+
+
+
+		<a class="n20"> Size/Dimension </a> <br> <br>
+		<img src="gray.png"> <a class="n18"> Single-Up </a> <br>
+		
+<table style="width:88%">		
+	<tr >	
+		<td class="n10" style="width:5%;  " >
+			Enter a <br> value <br> (Size)
+				<img src="arrowright.png">
+		</td>
+		<td > 
+			<img src="gray.png"> 
+			Width: 		
+				<input type="number" id="sW" aria-label="" name="enput" class="n20" style="width:3em;height:2em">			
+			x Height:
+				<input type="number" id="sH" aria-label="" name="enput" class="n20" style="width:3em;height:2em">	
+					<img src="gray.png">
+				<input type="button" id="radYes" onclick="radYes()" value="Yes" style="width:66px;height:55px">
+					<img src="gray.png">
+				<input type="button" onclick="RotateWH()" class="n8" value="RotateWH" style="width:66px;height:55px">		
+		</td>
+	</tr>
+<script>
+	function radYes(val) {	
+			document.getElementById("panel2").value = document.getElementById("sW").value;
+			document.getElementById("row2").value = document.getElementById("sH").value;
+				document.getElementById('tenx').click() ;
+				document.getElementById('draw747').click() ;
+		}
+//		x Breadth:
+//		<input type="number" id="sB" aria-label="" name="enput" class="n16"value=0 style="width:40px;height:30px">	
+	function radAcceptBox(val) {	
+			document.getElementById("panel2").value = document.getElementById("sW").value;
+			document.getElementById("panel3").value = document.getElementById("sB").value;
+			document.getElementById("panel4").value = document.getElementById("sW").value;
+			document.getElementById("panel5").value = document.getElementById("sB").value;
+			
+			document.getElementById("row2").value = document.getElementById("sB").value;
+			document.getElementById("row3").value = document.getElementById("sH").value;
+			document.getElementById("row4").value = document.getElementById("sB").value;		
+				document.getElementById('tenx').click() ;
+				document.getElementById('draw747').click() ;
+		}	
+</script>	
+	
+<script>	
+	function RotateWH() {		
+		var sW = document.getElementById("sW").value;
+		var sH = document.getElementById("sH").value;
+			document.getElementById("sW").value = sH;	
+			document.getElementById("sH").value = sW;
+				document.getElementById('radYes').click() ;		
+	}	
+</script>
+	
+</table > 	
+<br>
+	
+		
+<table style="width:88%">		
+	<tr class="n8" style="text-align:center" > 	
+		<td style="width:9%;  " >
+			If Box, <br> Dimension: <br> <img src="arrowright.png">
+		</td>	
+		<td style="width:9%">
+			<a id="panel1txt" > .. </a> <br>
+			<input type="number" id="panel1" value="0" style="width:50px">
+		</td>	
+		<td style="width:9%">
+			<a id="panel2txt"> .. </a> <br>
+			<input type="number" id="panel2" value="0" style="width:50px">			
+		</td>
+		<td style="width:9%">
+			<a id="panel3txt"> .. </a> <br>
+			<input type="number" id="panel3" value="0" style="width:50px">
+		</td>	
+		<td style="width:9%">
+			<a id="panel4txt"> .. </a> <br>
+			<input type="number" id="panel4" value="0" style="width:50px">
+		</td>	
+		<td style="width:9%">
+			<a id="panel5txt"> .. </a> <br>
+			<input type="number" id="panel5" value="0" style="width:50px"> 		
+		</td>	
+		<td style="width:9%"> 
+			<a id="panel6txt"> .. </a> <br>
+			<input type="number" id="panel6" value="0" style="width:50px">
+		</td>			
+	</tr>
+	
+	<tr>
+		<td rowspan="2" class="n8" style="text-align:center" > 
+			<a id="row1txt"> </a> <br>
+			<input type="number" id="row1" value="0" style="width:50px"> <br> <br>
+			<a id="row2txt"> . </a> <br>
+			<input type="number" id="row2" value="0" style="width:50px"> <br> <br>
+			<a id="row3txt"> . </a> <br>
+			<input type="number" id="row3" value="0" style="width:50px"> <br> <br>
+			<a id="row4txt"> . </a> <br>
+			<input type="number" id="row4" value="0" style="width:50px"> <br> <br>
+			<a id="row5txt"> . </a> <br>
+			<input type="number" id="row5" value="0" style="width:50px"> <br>
+		</td>
+		
+		<td rowspan="2" colspan="9" style="border:2px solid #4DFFF7" > 		
+			<svg width="600" height="400">							
+			<rect id="rect_vfarLtop" x="2" y="2" width="2" height="2" style="stroke:cyan; fill:#ffe6ff;"/>			
+			<rect id="rect_farLtop" x="2" y="2" width="2" height="2" style="stroke:cyan; fill:#e6ffcc;"/>
+			<rect id="rect_Ltop" x="2" y="2" width="2" height="2" style="stroke:cyan; fill:#ffe6ff;"/>			
+			<rect id="rect_Rtop" x="2" y="2" width="2" height="2" style="stroke:cyan; fill:#e6ffcc;"/>
+			<rect id="rect_farRtop" x="2" y="2" width="2" height="2" style="stroke:cyan; fill:#ffe6ff;"/>			
+			<rect id="rect_vfarRtop" x="2" y="2" width="2" height="2" style="stroke:cyan; fill:#e6ffcc;"/>
+			
+			<rect id="rect_vfarLtopx" x="2" y="2" width="2" height="2" style="stroke:blue; fill:#ffe6ff;"/>			
+			<rect id="rect_farLtopx" x="2" y="2" width="2" height="2" style="stroke:blue; fill:#e6ffcc;"/>
+			<rect id="rect_Ltopx" x="2" y="2" width="2" height="2" style="stroke:blue; fill:#ffe6ff;"/>			
+			<rect id="rect_Rtopx" x="2" y="2" width="2" height="2" style="stroke:blue; fill:#e6ffcc;"/>
+			<rect id="rect_farRtopx" x="2" y="2" width="2" height="2" style="stroke:blue; fill:#ffe6ff;"/>			
+			<rect id="rect_vfarRtopx" x="2" y="2" width="2" height="2" style="stroke:blue; fill:#e6ffcc;"/>			
+			
+			<rect id="rect_vfarLbotx" x="2" y="2" width="2" height="2" style="stroke:blue; fill:#ffe6ff;"/>			
+			<rect id="rect_farLbotx" x="2" y="2" width="2" height="2" style="stroke:blue; fill:#e6ffcc;"/>
+			<rect id="rect_Lbotx" x="2" y="2" width="2" height="2" style="stroke:blue; fill:#ffe6ff;"/>			
+			<rect id="rect_Rbotx" x="2" y="2" width="2" height="2" style="stroke:blue; fill:#e6ffcc;"/>
+			<rect id="rect_farRbotx" x="2" y="2" width="2" height="2" style="stroke:blue; fill:#ffe6ff;"/>			
+			<rect id="rect_vfarRbotx" x="2" y="2" width="2" height="2" style="stroke:blue; fill:#e6ffcc;"/>
+
+			<rect id="rect_vfarLbot" x="2" y="2" width="2" height="2" style="stroke:cyan; fill:#ffe6ff;"/>			
+			<rect id="rect_farLbot" x="2" y="2" width="2" height="2" style="stroke:cyan; fill:#e6ffcc;"/>
+			<rect id="rect_Lbot" x="2" y="2" width="2" height="2" style="stroke:cyan; fill:#ffe6ff;"/>			
+			<rect id="rect_Rbot" x="2" y="2" width="2" height="2" style="stroke:cyan; fill:#e6ffcc;"/>
+			<rect id="rect_farRbot" x="2" y="2" width="2" height="2" style="stroke:cyan; fill:#ffe6ff;"/>			
+			<rect id="rect_vfarRbot" x="2" y="2" width="2" height="2" style="stroke:cyan; fill:#e6ffcc;"/>
+			
+			<rect id="rect_vfarL" x="2" y="2" width="2" height="2" style="stroke:red; fill:#ffe6ff;"/>			
+			<rect id="rect_farL" x="2" y="2" width="2" height="2" style="stroke:red; fill:#e6ffcc;"/>
+			<rect id="rect_L" x="2" y="2" width="2" height="2" style="stroke:red; fill:#ffe6ff;"/>			
+			<rect id="rect_R" x="2" y="2" width="2" height="2" style="stroke:red; fill:#e6ffcc;"/>
+			<rect id="rect_farR" x="2" y="2" width="2" height="2" style="stroke:red; fill:#ffe6ff;"/>			
+			<rect id="rect_vfarR" x="2" y="2" width="2" height="2" style="stroke:red; fill:#e6ffcc;"/>			
+			</svg>
+		</td>
+				
+		<td style="vertical-align:top; text-align:center" >	
+			<a class="n18" > Bleeds: </a> <img src="blnk.png"> <br>
+			<input type="radio" name="bleedsize" id="pt0" > 0
+			<input type="radio" name="bleedsize" id="pt125"  style="width:22px;height:22px" checked > 0.125 <br> <br>
+				<input type="checkbox" name="bleeds" onchange="bleedtops()" style="width:22px;height:22px" > Top <img src="blnk.png"> <br>	
+				<input type="checkbox" name="bleeds" onchange="bleedlefts()" style="width:22px;height:22px" > Left
+				<input type="checkbox" name="bleeds" onchange="bleedrights()" style="width:22px;height:22px" > Right <br>
+				<input type="checkbox" name="bleeds" onchange="bleedbottoms()" style="width:22px;height:22px" > Bottom  <br>	
+		</td>	
+	</tr>	
+
+		
+<script>
+	function bleedlefts() {	
+		document.getElementById('panel1').value = .125;
+					document.getElementById('tenx').click() ;
+					document.getElementById('draw747').click() ;
+}
+</script>
+<script>	
+	function bleedrights() {	
+		document.getElementById('panel6').value = .125;
+					document.getElementById('tenx').click() ;
+					document.getElementById('draw747').click() ;
+}
+</script>
+<script>		
+	function bleedtops() {	
+		document.getElementById('row1').value = .125;
+					document.getElementById('tenx').click() ;
+					document.getElementById('draw747').click() ;
+}	
+</script>
+<script>	
+	function bleedbottoms() {	
+		document.getElementById('row5').value = .125;
+					document.getElementById('tenx').click() ;
+					document.getElementById('draw747').click() ;
+}
+// tenx --> draw747 is for page 1...	
+</script>	
+
+
+<tr>
+<td style="vertical-align:top; text-align:center" >	
+	<a class="n18" > Runsize Bleeds: </a> <img src="blnk.png"> <br>
+	<input type="radio" name="gripper" id="pt0" > 0.3
+	<input type="radio" name="gripper" id="pt125"  style="width:22px;height:22px" checked > 0.5 <br> <br>
+		<input type="checkbox" name="rsbleds" onchange="LvEdge()" style="width:22px;height:22px" > Leave Edge <br>	
+		<input type="checkbox" name="rsbleds" onchange="leftEdge()" style="width:22px;height:22px" > Left
+		<input type="checkbox" name="rsbleds" onchange="rightEdge()" style="width:22px;height:22px" > Right <br>
+		<input type="checkbox" name="rsbleds" onchange="gripperBite()" style="width:22px;height:22px" > Gripper Bite  <br>	
+</td>
+</tr>
+
+
+	<tr>
+		<td class="n10" style="width:6%;  " >
+			Slide right <br> to increase <br> image <br>
+			<img src="arrowright.png">
+		</td>		
+		<td colspan="6"   > 
+			<input type="text" id="Tenxfactor" value="10" class="n10" style="width:3em" >				
+			<input type="range" class="slider" value="10" min="10" max="50" onchange="range10x(this.value)" style="width:42em" >
+		</td>
+	</tr>	
+<script>
+	function range10x(val) {	
+		document.getElementById('Tenxfactor').value = val;
+			document.getElementById('tenx').click() ;
+			document.getElementById('draw747').click() ;
+	}	
+</script>
+	
+	<tr>
+		<td>
+			...
+		</td>		
+		<td colspan="6" > 		
+				<a class="n18"> Bleed size: </a> <br>
+					bleedszW <input type="number" id="bleedszW" class="n18" style="width:4em;height:2em" > x
+					bleedszH <input type="number" id="bleedszH" class="n18" style="width:4em;height:2em" > <br> <br>
+					bleedszW <input type="number" id="bleedszW" class="n18" style="width:4em;height:2em" > x
+					bleedszH <input type="number" id="bleedszH" class="n18" style="width:4em;height:2em" > <br> 
+					</td>
+	</tr>			
+</table> 
+<br> 
+	
+<script>
+	function tenx() {	
+		var tenx = document.getElementById("Tenxfactor").value;	
+		var panel1 = document.getElementById("panel1").value;
+			document.getElementById("vfarLtopW10x").value = panel1 * tenx;
+		var panel2 = document.getElementById("panel2").value;
+			document.getElementById("farLtopW10x").value = panel2 * tenx;
+		var panel3 = document.getElementById("panel3").value;
+			document.getElementById("LtopW10x").value = panel3 * tenx;	
+		var panel4 = document.getElementById("panel4").value;
+			document.getElementById("RtopW10x").value = panel4 * tenx;
+		var panel5 = document.getElementById("panel5").value;
+			document.getElementById("farRtopW10x").value = panel5 * tenx;
+		var panel6 = document.getElementById("panel6").value;
+			document.getElementById("vfarRtopW10x").value = panel6 * tenx;
+		var row1 = document.getElementById("row1").value;
+			document.getElementById("vfarLtopH10x").value = row1 * tenx;
+		var row2 = document.getElementById("row2").value;
+			document.getElementById("vfarLtopxH10x").value = row2 * tenx;
+		var row3 = document.getElementById("row3").value;
+			document.getElementById("vfarLH10x").value = row3 * tenx;	
+		var row4 = document.getElementById("row4").value;
+			document.getElementById("vfarLbotxH10x").value = row4 * tenx;
+		var row5 = document.getElementById("row5").value;
+			document.getElementById("vfarLbotH10x").value = row5 * tenx;				
+				document.getElementById("bleedW").click();
+				document.getElementById("bleedH").click();
+	}
+//</script>
+//<script> 
+	function bleedW() {	
+		var panel1 = document.getElementById("panel1").value;
+		var panel2 = document.getElementById("panel2").value;
+		var panel3 = document.getElementById("panel3").value;
+		var panel4 = document.getElementById("panel4").value;
+		var panel5 = document.getElementById("panel5").value;
+		var panel6 = document.getElementById("panel6").value;
+			document.getElementById("bleedszW").value = +panel1 + +panel2 + +panel3 + +panel4 + +panel5 + +panel6;
+//			document.getElementById("bleedszW").value = document.getElementById("bleedszW").value
+			document.getElementById("bleedszW2").value = document.getElementById("bleedszW").value
+	}	
+//</script> 
+//<script>
+	function bleedH() {	
+		var row1 = document.getElementById("row1").value;
+		var row2 = document.getElementById("row2").value;
+		var row3 = document.getElementById("row3").value;
+		var row4 = document.getElementById("row4").value;
+		var row5 = document.getElementById("row5").value;
+			document.getElementById("bleedszH").value = +row1 + +row2 + +row3 + +row4 + +row5;
+//			document.getElementById("bleedszH").value = document.getElementById("bleedszH").value
+			document.getElementById("bleedszH2").value = document.getElementById("bleedszH").value
+	}	
+// single up ; 	
+</script> 
+
+
+
+</div>
+
+
+
+
+
+
+<div id="pg2" class="tabcontent">
+
+
+
+		<a class="n20"> Paperdiv </a>	
+		
+<table style="width:99%"> 
+
+	<tr > 	
+		<td  style="width:5%"> 
+			..
+		</td>
+			<td style="width:128px; vertical-align:top" >
+				<input type="radio" name="dtp" id="Chk_card2" >
+					<img src="2card.png" style="width:28px;height:44px">
+			</td>  														
+			<td style="width:101px; vertical-align:top" >
+				<input type="radio" name="dtp" id="Chk_pad2" >
+					<img src="2pad.png" style="width:28px;height:44px">
+			</td>										
+			<td style="width:94px; vertical-align:top" >
+				<input type="radio" name="dtp" id="Chk_letterhead2" >
+					<img src="2letterhead.png" style="width:28px;height:44px">
+			</td>									
+			<td style="width:102px; vertical-align:top; text-align:center" >
+				<input type="radio" name="dtp" id="Chk_poster2" >
+					<img src="2poster.png" style="width:28px;height:44px">
+			</td>
+			<td style="width:106px; vertical-align:top" >
+				<input type="radio" name="dtp" id="Chk_ply2" >
+					<img src="2ply.png" style="width:28px;height:44px">
+			</td>
+			<td style="width:106px; vertical-align:top" >
+				<input type="radio" name="dtp" id="Chk_folder2" >
+					<img src="2folder.png" style="width:28px;height:44px">
+			</td>	
+			<td style="width:98px; vertical-align:top" >
+				<input type="radio" name="dtp" id="Chk_envelope2" >
+					<img src="2envelope.png" style="width:28px;height:44px">
+			</td>			
+			<td style="width:106px; vertical-align:top" >
+				<input type="radio" name="dtp" id="Chk_box2" >
+					<img src="2box.png" style="width:28px;height:44px">
+			</td>				
+			<td style="vertical-align:top" >
+				<input type="radio" name="dtp" id="Chk_pages2" >
+					<img src="2page.png" style="width:28px;height:44px">
+			</td>							
+	</tr>
+
+	<tr >	
+		<td class="n10" style="vertical-align:top " >
+			Choose <br> sSize <br> 
+			<img src="arrowright.png"> <br>
+			Then choose <br> a divi 	<br> 
+		</td>
+		
+		<td valign="top" class="n10" style="text-align:left; border:2px solid #FF1493">  
+			<input type="radio" name="wttf" onclick="ab()" style="width:18px; height:18px" >			
+					<a class="n18"> 22.5x28.5 </a> <br> 
+					<img src="gray.png"> <a class="n14"> Specialty </a> <br> 		
+			<input type="radio" name="paper" onclick="chkSpecialpaper()" > Paper <br>				 
+			<input type="radio" name="paper" onclick="tt()" > Board <br>				 				 
+			<input type="radio" name="paper" onclick="tt()" > Vellum <br>
+			<input type="radio" name="paper" onclick="tt()"> Tag board <br>
+		</td>		
+			
+		<td valign="top" class="n10" style="text-align:left; border:2px solid #FF1493"> 
+			<input type="radio" name="wttf" onclick="twenty2x34()" style="width:18px; height:18px" > 
+				<a class="n18"> 22x34 </a> <br> 
+				<img src="gray.png"> <a class="n14"> Bond </a> <br> 
+			<input type="radio" name="paper" onclick="ee()" > #16 <br>	
+				<input type="radio" name="paper" onclick="ee()" > #18 <br>
+		</td>
+	
+		<td valign="top" class="n10" style="text-align:left; border:2px solid #FF1493"> 
+			<input type="radio" name="paper" onclick="DE()" style="width:18px; height:18px" >
+				<br>
+				<a class="n16"> Custom </a> <br>
+			<input type="radio" name="paper" onclick="DE()" style="width:18px; height:18px" >
+				<br>			
+				<a class="n16"> Pre-cut </a> <br> 
+						<input type="radio" name="paper" onclick="dd()" style="width:16px"> 
+							8.5x11 <br> 
+						<input type="radio" name="paper" onclick="dd()" style="width:16px"> 
+							A4 <br> 
+		</td>
+		
+		<td valign="top" class="n10" style="text-align:left; border:2px solid #FF1493">  
+			<input type="radio" name="wttf" onclick="twenty5x38()" style="width:18px; height:18px" > 
+				<a class="n18"> 25x38 </a> <br>	
+				<img src="gray.png"> <a class="n14"> Coated2s </a> <br> 
+				<img src="gray.png"> <a class="n14"> Paper </a> <br> 				
+			<input type="radio" name="paper" onclick="dd()" > #60 <br>	
+			<input type="radio" name="paper" onclick="dd()" > #70 <br>
+			<input type="radio" name="paper" onclick="dd()" > #80 <br>
+			<input type="radio" name="paper" onclick="dd()" > #120 <br>
+		</td>
+		
+		<td valign="top" class="n10" style="text-align:left; border:2px solid #FF1493">    
+			<input type="radio" name="wttf" onclick="twenty4x36()" style="width:18px; height:18px" > 
+				<a class="n18"> 24x36 </a> <br>
+				<img src="gray.png"> <a class="n14"> Carbonless </a> <br>
+			<input type="radio" name="paper" onclick="vv" > 
+				Top,Mid,Bot <br>
+			<input type="radio" name="paper" onclick="vv">	 
+				Bond,OS <br>
+			<input type="radio" name="paper" onclick="vv">	 
+				Bond,CBond <br>
+		</td>
+		
+		<td valign="top" class="n10" style="text-align:left; border:2px solid #FF1493">   
+			<input type="radio" name="wttf" onclick="twenty5x38()" style="width:18px; height:18px" > 
+				<a class="n18"> 25x38 </a> <br>		
+				<img src="gray.png"> <a class="n14"> Coated2S </a> <br>
+				<img src="gray.png"> <a class="n14"> Board </a> <br> 	
+			<input type="radio" name="paper" onclick="xxxx()" style="width:16px"> #160 <br>	
+			<input type="radio" name="paper" onclick="xxxx()" style="width:16px"> #180 <br>
+			<input type="radio" name="paper" onclick="xxxx()" style="width:16px"> #200 <br>
+			<input type="radio" name="paper" onclick="xxxx()" style="width:16px"> #220 <br>
+		</td>
+		
+		<td valign="top" class="n10" style="text-align:left; border:2px solid #FF1493">   
+			<input type="radio" name="paper" onclick="DE()" style="width:18px; height:18px" >
+				<br>
+				<a class="n16"> Custom </a> <br>
+			<input type="radio" name="paper" onclick="DE()" style="width:18px; height:18px" >
+				<br>			
+				<a class="n16"> Pre-made </a> <br> 
+					<input type="radio" name="paper" onclick="dd()" style="width:16px"> 
+						<a class="n12"> 500s <br>
+						<img src="blnk.png">(ream) </a>
+		</td>
+	
+		<td valign="top" class="n10" style="text-align:left; border:2px solid #FF1493">   
+			<input type="radio" name="wttf" onclick="thirty1x43()" style="width:18px; height:18px" > 
+				<a class="n18"> 31x43 </a> <br>
+				<img src="gray.png"> <a class="n14"> Foldcote </a> <br>
+			<input type="radio" name="paper" onclick="nn()" style="width:16px"> #10<br>				
+			<input type="radio" name="paper" onclick="nn()" style="width:16px">  #12<br>				
+			<input type="radio" name="paper" onclick="nn()" style="width:16px">  #15<br>			
+			<input type="radio" name="paper" onclick="nn()" style="width:16px">  #18<br>				
+		</td>
+
+		<td valign="top" class="n10" style="text-align:left; border:2px solid #FF1493"> 
+			<input type="radio" name="wttf" onclick="twenty8x34()" style="width:18px; height:18px" > 
+				<a class="n18"> 28x34 </a> <br>
+				<img src="gray.png"> <a class="n14"> Bookpaper </a> <br> 			
+			<input type="radio" name="paper" onclick="nn" style="width:16px">  #40<br>					
+			<input type="radio" name="paper" onclick="nn" style="width:16px">  #50<br>				
+			<input type="radio" name="paper" onclick="nn" style="width:16px">  #60<br>					
+			<input type="radio" name="paper" onclick="nn" style="width:16px">  #70<br>
+		</td>		
+	</tr>	
+</table>		
+<br>
+
+	
+<table style="width:86%" >
+
+	<tr>
+		<td class="n9" style="width:6% " >
+			<p id="shipping"> . </p>
+			<img src="gray.png">
+		</td>			
+		<td style="width:14%; text-align:center "> 
+			<input type="radio" name="magni2" id="rad0b" >
+				<img src="magni1.png"> <br> 
+		</td>		
+		<td style="width:14%; text-align:center "> 
+			<input type="radio" name="magni2" id="rad1b" >
+				<img src="magni2.png"> <br> 
+		</td>			
+		<td style="width:14%; text-align:center "> 
+			<input type="radio" name="magni2" id="rad2b" >
+				<img src="magni3.png"> <br> 
+		</td>		
+		<td style="width:14%; text-align:center "> 
+			<input type="radio" name="magni2" id="rad3b" >
+				<img src="magni4.png"> <br> 
+		</td>			
+		<td style="width:14%; text-align:center "> 
+			<input type="radio" name="magni2" id="rad4b" >
+				<img src="magni5.png"> <br> 
+		</td>
+		<td style="text-align:center "> 
+			<input type="radio" name="magni2" id="rad5b" >
+				<img src="magni6.png"> <br> 
+		</td>		
+	</tr>		
+
+	<tr>
+		<td class="n12" >
+			Choose <br>
+			<img src="arrowright.png"> <br>
+		</td>
+		
+		<td id="td_paperdiv00" style="text-align:center; border:2px solid #4DFFF7; vertical-align:top">  		
+			<input type="radio" name="paper" style="width:22px;height:22px"> <br>			
+				<a class="n16"> Digital </a> <br>
+				w <input  id="19pt0" class="n10" value="19" style="width:23px; height:13px"> <br>
+				h <input  id="12pt5" class="n10" value="12.5" style="width:23px; height:13px"> <br>
+		</td>		
+		<td id="td_paperdiv01" style="text-align:left; border:2px solid #4DFFF7; vertical-align:top">  
+			<input type="radio" name="paper" onclick="twelve_verti()" style="width:22px;height:22px"> 		
+				<a class="n16"> 12-verti </a> <br>
+				w <input  id="12vW" class="n10" style="width:23px; height:13px"> 
+				h <input  id="12vH" class="n10" style="width:23px; height:13px"> <br>
+				<img src="paper12v.png"> <br>
+			<input type="radio" name="paper" onclick="twelve_horiz()" style="width:22px; height:22px">
+				<a class="n16"> 12-horiz </a> <br>
+				w <input  id="12hW" class="n10" style="width:24px; height:14px"> 
+				h <input  id="12hH" class="n10" style="width:24px; height:14px"> <br>
+				<img src="paper12h.png"> <br>
+				...................<br>	<br>				
+			<input type="radio" name="paper" onclick="ten_verti()" style="width:22px; height:22px">
+				<a class="n16"> 10-verti </a> <br>
+				w <input  id="10vW" class="n10" style="width:24px; height:14px">   
+				h <input  id="10vH" class="n10" style="width:24px; height:14px"> <br>
+				<img src="paper10v.png"> <br>		
+			<input type="radio" name="paper" onclick="ten_horiz()" style="width:22px; height:22px">
+				<a class="n16"> 10-horiz </a> <br>
+				w <input  id="10hW" class="n10" style="width:24px; height:14px">   
+				h <input  id="10hH" class="n10" style="width:24px; height:14px"> <br>	
+				<img src="paper10h.png"> <br> 		
+		</td>		
+ 			
+		<td id="td_paperdiv02" style="text-align:left; border:2px solid #4DFFF7; vertical-align:top"> 
+			<input type="radio" name="paper" onclick="nine_verti()" style="width:22px;height:22px"> 					
+				<a class="n16"> 9-verti </a> <br>
+				w <input  id="9vW" class="n10" style="width:24px; height:14px">  
+				h <input  id="9vH" class="n10" style="width:24px; height:14px"> <br>
+				<img src="paper09v.png"> <br>
+			<input type="radio" name="paper" onclick="nine_horiz()" style="width:22px; height:22px">
+				<a class="n16"> 9-horiz </a> <br>
+				w <input  id="9hW" class="n10" style="width:24px; height:14px">  
+				h <input  id="9hH" class="n10" style="width:24px; height:14px"> <br>
+				<img src="paper09h.png"> <br>				
+				...................<br>	<br>				
+			<input type="radio" name="paper" onclick="eight_verti()" style="width:22px; height:22px">
+				<a class="n16"> 8-verti </a> <br>
+				w <input  id="8vW" class="n10" style="width:24px; height:14px"> 
+				h <input  id="8vH" class="n10" style="width:24px; height:14px"> <br>	
+				<img src="paper08v.png"> <br>
+			<input type="radio" name="paper" onclick="eight_horiz()" style="width:22px; height:22px">
+				<a class="n16"> 8-horiz </a> <br>
+				w <input  id="8hW" class="n10" style="width:24px; height:14px"> 
+				h <input  id="8hH" class="n10" style="width:24px; height:14px"> <br>	
+				<img src="paper08h.png"> <br>			
+		</td>
+ 			
+		<td id="td_paperdiv03" style="text-align:left; border:2px solid #4DFFF7; vertical-align:top">  
+			<input type="radio" name="paper" onclick="six_verti()" style="width:22px;height:22px">					
+			<a class="n16"> 6-verti </a> <br>
+				w <input  id="6vW" class="n10" style="width:24px; height:14px"> 
+				h <input  id="6vH" class="n10" style="width:24px; height:14px"> <br>	
+				<img src="paper06v.png"> <br>
+			<input type="radio" name="paper" onclick="six_horiz()" style="width:22px; height:22px">
+				<a class="n16"> 6-horiz </a> <br>
+				w <input  id="6hW" class="n10" style="width:24px; height:14px"> 
+				h <input  id="6hH" class="n10" style="width:24px; height:14px"> <br>
+				<img src="paper06h.png"> <br>	
+		</td>	
+ 		
+		<td id="td_paperdiv04" style="text-align:left; border:2px solid #4DFFF7; vertical-align:top"> 
+			<input type="radio" name="paper" onclick="four_verti()" style="width:22px;height:22px">							
+				<a class="n16"> 4-verti </a> <br>
+				w <input  id="4vW" class="n10" style="width:24px; height:14px"> 
+				h <input  id="4vH" class="n10" style="width:24px; height:14px"> <br>
+				<img src="paper04v.png"> <br>
+			<input type="radio" name="paper" onclick="four_horiz()" style="width:22px; height:22px">
+				<a class="n16"> 4-horiz </a> <br>
+				w <input  id="4hW" class="n10" style="width:24px; height:14px"> 
+				h <input  id="4hH" class="n10" style="width:24px; height:14px"> <br>
+				<img src="paper04h.png"> <br>		
+				...................<br>	<br>			
+			<input type="radio" name="paper" onclick="three_verti()" style="width:22px; height:22px">
+				<a class="n16"> 3-verti </a> <br>
+				w <input  id="3vW" class="n10" style="width:24px; height:14px">
+				h <input  id="3vH" class="n10" style="width:24px; height:14px"> <br>
+				<img src="paper03v.png"> <br>			
+			<input type="radio" name="paper" onclick="three_horiz()" style="width:22px; height:22px">
+				<a class="n16"> 3-horiz </a> <br>
+				w <input  id="3hW" class="n10" style="width:24px; height:14px"> 
+				h <input  id="3hH" class="n10" style="width:24px; height:14px"> <br>	
+				<img src="paper03h.png"> <br> 		
+		</td>		
+ 	
+		<td id="td_paperdiv05" style="text-align:left; border:2px solid #4DFFF7; vertical-align:top"> 	
+			<input type="radio" name="paper" onclick="two_verti()" style="width:22px;height:22px">				
+				<a class="n16"> 2-verti </a> <br>
+				w <input  id="2vW" class="n10" style="width:24px; height:14px"> 
+				h <input  id="2vH" class="n10" style="width:24px; height:14px"> <br>
+				<img src="paper02v.png"> <br>  
+			<input type="radio" name="paper" onclick="two_horiz()" style="width:22px; height:22px">
+				<a class="n16"> 2-horiz </a> <br>
+				w <input  id="2hW" class="n10" style="width:24px; height:14px"> 
+				h <input  id="2hH" class="n10" style="width:24px; height:14px"> <br>	
+				<img src="paper02h.png"> <br>  		
+			...................<br>	<br>				
+			<input type="radio" name="paper" onclick="one_verti()" style="width:22px; height:22px">
+				<a class="n16"> 1-verti </a> <br>
+				w <input  id="1vW" class="n10" style="width:24px; height:14px">  
+				h <input  id="1vH" class="n10" style="width:24px; height:14px"> <br>
+				<img src="paper01v.png"> <br>
+			...................<br>	<br>				
+			<input type="radio" name="paper" onclick="pre-cut()" style="width:22px; height:22px">
+				<a class="n16"> Pre-cut </a> <br>	
+				<input type="radio" name="paper" onclick="pre-made()" style="width:22px; height:22px">
+				<a class="n16"> Pre-made </a> <br>				
+		</td>	 		
+	</tr>	
+</table> 
+<br>
+
+
+<table class="n12" style="width:86%" >
+
+	<a class="n20"> Offset Mach- </a> 
+	<tr>
+		<td class="n12" style="width:6%" >
+			<br>
+			<img src="gray.png"> <br>
+		</td>	
+		
+		<td style="width:16%;  ; border:2px solid #4DFFF7; vertical-align:top">  
+			<input type="radio" name="heid" id="rad0c" style="width:22px;height:22px"> <br>  
+				Non- <br> Offset <br> (Digital) <br>
+		</td>		
+		<td style="width:16%;  ; border:2px solid #4DFFF7; vertical-align:top">  
+			<input type="radio" name="heid" id="rad1c" style="width:22px;height:22px"> 
+					Heidelberg <br>
+				<img src="graylong.png">					
+					GTO-46 <br>
+				<img src="graylong.png">					
+					GTO-52 <br>
+				<img src="graylong.png">					
+					Kor <br>
+				<img src="graylong.png">			
+					Kora <br> <br>
+		</td>		
+		<td style="width:16%;  ; border:2px solid #4DFFF7; vertical-align:top"> 
+			<input type="radio" name="heid" id="rad2c" style="width:22px; height:22px">
+					Heidelberg <br>
+				<img src="graylong.png">					
+					Kord-64 <br>
+				<img src="graylong.png">				
+					Sork <br> <br>
+		</td>	
+		<td style="width:16%;  ; border:2px solid #4DFFF7; vertical-align:top">  
+			<input type="radio" name="heid" id="rad3c" style="width:22px; height:22px">	
+					Heidelberg <br> 
+				<img src="graylong.png">					
+					Kors <br>
+				<img src="graylong.png">				
+					Sorm <br> <br>
+		</td>	
+		<td style="width:16%;  ; border:2px solid #4DFFF7; vertical-align:top">  
+			<input type="radio" name="heid" id="rad4c" style="width:22px; height:22px"> 	
+					Heidelberg <br>
+				<img src="graylong.png">					
+					Sord <br>
+				<img src="graylong.png">					
+					Sors <br> <br>
+		</td>	
+		<td style="text-align:left; border:2px solid #4DFFF7; vertical-align:top"> 
+			<input type="radio" name="heid" id="rad5c" style="width:22px; height:22px"> 	
+					Heidelberg <br>
+				<img src="graylong.png">					
+					SormZ <br>
+				<img src="graylong.png">					
+					SordZ <br>
+				<img src="graylong.png">				
+					SorsZ <br>
+		</td>					
+	</tr>	
+	
+	<tr>
+		<td class="n12" >
+			Ctp <br>
+			<img src="gray.png"> <br>
+		</td>
+		<td style="text-align:left; border:2px solid #4DFFF7; vertical-align:top">  
+			..
+		</td>
+		<td style="text-align:left; border:2px solid #4DFFF7; vertical-align:top">  
+			<input type="radio" name="Ctp" id="rad3c" style="width:22px; height:22px">
+				450x370mm <br>
+			<input type="radio" name="Ctp" id="rad3c" style="width:22px; height:22px">			
+				510x400mm <br>
+			<input type="radio" name="Ctp" id="rad3c" style="width:22px; height:22px">		
+				570x506mm <br> <br>
+		</td>
+		<td style="text-align:left; border:2px solid #4DFFF7; vertical-align:top">  
+			<input type="radio" name="Ctp" id="rad3c" style="width:22px; height:22px">
+				650x550mm <br>
+		</td>
+		<td style="text-align:left; border:2px solid #4DFFF7; vertical-align:top">  
+			<input type="radio" name="Ctp" id="rad3c" style="width:22px; height:22px">
+				724x615mm <br>			
+		</td>
+		<td style="text-align:left; border:2px solid #4DFFF7; vertical-align:top">  
+			<input type="radio" name="Ctp" id="rad3c" style="width:22px; height:22px">
+				895x715mm <br>
+			<input type="radio" name="Ctp" id="rad3c" style="width:22px; height:22px"> 			
+				1030x770mm <br>
+		</td>	
+		<td style="text-align:left; border:2px solid #4DFFF7; vertical-align:top"> 
+			<input type="radio" name="Ctp" id="rad3c" style="width:22px; height:22px"> 
+				724x615mm <br>
+			<input type="radio" name="Ctp" id="rad3c" style="width:22px; height:22px">	
+				895x715mm <br>
+			<input type="radio" name="Ctp" id="rad3c" style="width:22px; height:22px">			
+				1030x770mm <br>
+		</td>	
+	</tr>	
+	
+</table> 
+<br>
+
+
+<table style="width:75%" >
+
+	<a class="n20"> Layout, Design, etc. </a> <br> <br>
+	<tr>
+		<td style="text-align:center; vertical-align:top; border:2px solid #4DFFF7"> 
+				<img src="singleup.png">
+		</td>
+		<td colspan="2" style="text-align:left; vertical-align:top; border:2px solid #4DFFF7"> 
+		
+			<a class="n20"> Artwork/s </a> <a class="i10"> (Rate from 1 to 10) </a>	<br>					 
+				<a class="n12"> #1 </a>
+				<input   id="artwork1" class="n14" value="0" style="width:2em;height:1em" >
+				<input type="range" class="slider" min="1" max="10" value="0" onchange="updateArtwork1(this.value)" style="width:9em;height:1em" > 
+				<br>
+				<a class="n12"> #2 </a>
+				<input   id="artwork2" class="n14" value="0" style="width:2em;height:1em" >
+				<input type="range" class="slider" min="1" max="10" value="0" onchange="updateArtwork2(this.value)" style="width:9em;height:1em" > 	  
+				<br>
+				Tot: <input   id="gtlayout" value="0" style="width:22px;height:22px" > 	
+				Php: <input   id="gtlayout" value="0" style="width:2em;height:2em" >
+				<br> <br>		
+			<a class="n20"> Typeface/s </a> <a class="i10"> (Rate from 1 to 10) </a> <br>						  
+				<a class="n12"> Commonly Used: </a> <br>		
+				. . <input   id="typeface1" value="0" class="n14"  style="width:2em;height:1em" >
+				<input type="range" class="slider" min="1" max="10" value="0" onchange="updateTypeface1(this.value)" style="width:9em;height:1em" >
+				<br>
+				<a class="n12"> Hard-to-Find: </a> <br>
+				. . <input   id="typeface2"  class="n14"  value="0" style="width:2em;height:1em" >
+				<input type="range" class="slider" min="1" max="10" value="0" onchange="updateTypeface2(this.value)" style="width:9em;height:1em" > 
+				<br>		 
+				Tot: <input   id="gtlayout2" value="0" style="width:22px;height:22px" > 	
+				Php: <input   id="gtlayout2" value="0" style="width:2em;height:2em" >
+		</td>		
+		<td > 
+				-
+		</td>		
+		<td style="text-align:center; vertical-align:top; border:2px solid #4DFFF7"> 
+				<img src="multipleup.png"> 
+		</td>
+		<td colspan="2" style="text-align:left; vertical-align:top; border:2px solid #4DFFF7"> 		
+				<a class="n20"> Column/s & Row/s </a> <a class="i10"> (1 to 10) </a> <br>							  
+				<input type="range" class="slider" min="1" max="10" value="1" onchange="ccc(this.value)" style="width:9em;height:1em" > <br>
+				<input type="range" class="slider" min="1" max="10" value="1" onchange="rrr(this.value)" style="width:9em;height:1em" > <br>
+				<br>		
+				ssCol: <input  id="ssCol" class="n14" style="width:36px; height:26px"> x
+				ssRow: <input  id="ssRow" class="n14" style="width:36px; height:26px"> <br>				
+		</td>			
+	</tr>
+</table> 	
+<br>
+
+
+<table style="width:99%" > 
+
+	<tr>		
+		<td colspan="4" style="border:2px solid #4DFFF7" >   
+			ssWidth: 
+					<input type="text" id="ssW" value="" class="n18" style="width:2em;height:2em">			
+					10x <input type="text" id="ssW10x"   class="n8" style="width:33px;height:1em">								
+		<img src="gray.png">	
+			ssHeight: 
+					<input type="text" id="ssH" value="" class="n18" style="width:2em;height:2em">			
+					10x <input type="text" id="ssH10x"   class="n8" style="width:33px;height:1em">
+					
+		<img src="gray.png">		
+			<input type="button" onclick="ssWH10x()" class="n12" value="ssWH10x" style="width:8em;height:4em">
+		<img src="gray.png">	
+			<input type="button" id="ssDraw" onclick="ssDraw()" value="ssDraw" class="n8" style="width:3em;height:2em" >
+			<input type="button" id="Rotat" onclick="Rotat()" value="Rotat" class="n12" style="width:4em;height:4em" >	
+		</td>	
+	</tr>	
+<script>
+		function ssWH10x() {
+		var ssW = document.getElementById("ssW").value;	
+		var ssH = document.getElementById("ssH").value;	
+//		var tenx = document.getElementById("Tenxfactor").value;
+//		var tenx = 10;
+			document.getElementById("ssW10x").value = ssW * 10;	
+			document.getElementById("ssH10x").value = ssH * 10;		
+						document.getElementById("ssDraw").click();			
+	}	
+</script>
+<script>	
+		function ssDraw() {	
+			var ssWd = document.getElementById("ssW10x").value;	
+			var ssHt = document.getElementById("ssH10x").value;				
+				document.getElementById("rectShitsize").setAttribute("x", 0);		
+				document.getElementById("rectShitsize").setAttribute("y", 0);
+				document.getElementById("rectShitsize").setAttribute("width", ssWd);		
+				document.getElementById("rectShitsize").setAttribute("height", ssHt);	
+		}
+</script>
+<script>	
+		function Rotat() {		
+			var ssW = document.getElementById("ssW").value;
+			var ssH = document.getElementById("ssH").value;
+				document.getElementById("ssW").value = ssH;	
+				document.getElementById("ssH").value = ssW;
+				
+			var ssW10x = document.getElementById("ssW10x").value;
+			var ssH10x = document.getElementById("ssH10x").value;
+				document.getElementById("ssW10x").value = ssH10x;	
+				document.getElementById("ssH10x").value = ssW10x;
+						document.getElementById("ssDraw").click();
+		}	
+</script>
+
+	<tr>
+		<td colspan="4" style="border:2px solid #4DFFF7" >   
+			bleedszW (2):
+					<input type="text" id="bleedszW2" aria-label="" name="enput" class="n12" value="0" style="width:44px;height:22px"> 		
+					10x <input type="text" id="bleedszW10x" class="n8" style="width:33px;height:16px">	
+			bleedszH (2):
+					<input type="text" id="bleedszH2" aria-label="" name="enput" class="n12" value="0" style="width:44px;height:22px">			
+					10x <input type="text" id="bleedszH10x" class="n8" style="width:33px;height:16px"> 
+		<img src="gray.png"> 1384
+			<input type="button" onclick="bleedszWH_n_WH10x()" class="n10" value="bleedszWH_n_WH10x" style="width:13em;height:4em">
+		</td>	
+</tr>		
+<script>
+	function bleedszWH_n_WH10x() {
+		var bleedszW = document.getElementById("bleedszW").value;	
+		var bleedszH = document.getElementById("bleedszH").value;	
+//		var tenx = document.getElementById("Tenxfactor").value; //		var tenx = 10;
+			document.getElementById("bleedszW10x").value = bleedszW * 10;	
+			document.getElementById("bleedszH10x").value = bleedszH * 10;		
+	}	
+</script>
+
+<tr>
+		<td style="width:75%; vertical-align:top" >		
+					<img src="gray.png"> 
+				bledsizeCol:
+				<input type="number" id="bledsizeCol" value="1" class="n30" onchange="creat_bledsizeWH();creat_gb_bledsizeWH();draw_bledsizeRowCol()" style="width:55px;height:44px">
+				bledsizeRow: 
+				<input type="number" id="bledsizeRow" value="0" class="n30" onchange="creat_bledsizeWH();creat_gb_bledsizeWH();draw_bledsizeRowCol()" style="width:55px;height:44px"> 
+					<img src="gray.png">
+				<input type="button" onclick="creat_bledsizeWH()" value="creat_bledsizeWH" style="width:2em;height:2em" > 
+					<br>
+					<img src="gray.png"> 				
+				bledsizeW: <input type="text" id="bledsizeW" class="n16" style="width:55px;height:44px"> 
+					<a class="n8"> bledsizeW10x: </a>  
+				<input type="text" id="bledsizeW10x" class="n6" style="width:33px;height:16px"> x
+				bledsizeH:	<input type="text" id="bledsizeH" class="n16" style="width:55px;height:44px"> 	
+					<a class="n8"> bledsizeH10x: </a>  
+				<input type="text" id="bledsizeH10x" class="n6" style="width:33px;height:16px"> 
+					<img src="gray.png">
+				<input type="button" onclick="creat_gb_bledsizeWH()" value="creat" style="width:2em;height:2em" >  
+				<input type="button" id="xxx" onclick="draw_bledsizeRowCol()" value="draw_bledsizeRowCol" style="width:4em;height:2em" >
+					<br>
+
+				<input type="button" id="xxx" onclick="draw_gb_bledsizeRowCol()" value="draw_gb_bledsizeRowCol" style="width:4em;height:2em" >
+					<br>
+					
+					<img src="gray.png"> 
+				gb_bledsizeW: <input type="text" id="gb_bledsizeW" class="n16" style="width:66px;height:33px"> 
+					<a class="n8"> gb_bledsizeW10x: </a>  
+				<input type="text" id="gb_bledsizeW10x" class="n6" style="width:33px;height:16px"> x
+				gb_bledsizeH:	<input type="text" id="gb_bledsizeH" class="n16" style="width:66px;height:33px"> 	
+					<a class="n8"> gb_bledsizeH10x: </a>  
+				<input type="text" id="gb_bledsizeH10x" class="n6" style="width:33px;height:16px"> 	<br>
+		</td>
+		
+<script>	
+	function creat_bledsizeWH() {
+		var bledsizeRow = document.getElementById("bledsizeRow").value ;	
+		var bledsizeCol = document.getElementById("bledsizeCol").value ;					
+		var bleedszW2 = document.getElementById("bleedszW2").value;		
+		var bleedszH2 = document.getElementById("bleedszH2").value;			
+			document.getElementById("bledsizeW").value = bledsizeCol * bleedszW2;
+			document.getElementById("bledsizeH").value = bledsizeRow * bleedszH2;			
+//10x
+		var bledsizeW = document.getElementById("bledsizeW").value;		
+		var bledsizeH = document.getElementById("bledsizeH").value;			
+			document.getElementById("bledsizeW10x").value = bledsizeW * 10;
+			document.getElementById("bledsizeH10x").value = bledsizeH * 10;		
+	}
+</script>
+
+<script>	
+	function creat_gb_bledsizeWH() {
+		var Ledge = document.getElementById("Ledge").value;	
+		var Redge = document.getElementById("Redge").value;				
+		var Lvedge = document.getElementById("Lvedge").value;	
+		var Gbite = document.getElementById("Gbite").value;	
+		var bledsizeW = document.getElementById("bledsizeW").value;		
+		var bledsizeH = document.getElementById("bledsizeH").value;				
+			document.getElementById("gb_bledsizeW").value = +Ledge + +Redge + +bledsizeW ;
+			document.getElementById("gb_bledsizeH").value = +Lvedge + +Gbite + +bledsizeH ;
+//10x
+		var gb_bledsizeW = document.getElementById("gb_bledsizeW").value;
+		var gb_bledsizeH = document.getElementById("gb_bledsizeH").value;	
+			document.getElementById("gb_bledsizeW10x").value = gb_bledsizeW * 10;
+			document.getElementById("gb_bledsizeH10x").value = gb_bledsizeH * 10;	
+	}
+</script>
+
+<script>
+	function draw_gb_bledsizeRowCol() {	
+		var bsW10x = document.getElementById("gb_bledsizeW10x").value;	
+		var bsH10x = document.getElementById("gb_bledsizeH10x").value;	
+		var bledsizeCol = document.getElementById("bledsizeCol").value;
+		var bledsizeRow = document.getElementById("bledsizeRow").value;
+
+			var bsWd = bsW10x * bledsizeCol;	
+			var bsHt = bsH10x * bledsizeRow ;	
+			
+			document.getElementById("rect_gbBleedsize").setAttribute("x", 0);		
+			document.getElementById("rect_gbBleedsize").setAttribute("y", 0);
+			document.getElementById("rect_gbBleedsize").setAttribute("width", bsWd);		
+			document.getElementById("rect_gbBleedsize").setAttribute("height", bsHt);	
+</script>
+
+
+
+		<td style="text-align:right; border:2px solid #4DFFF7"> 	 
+
+			<input type="button" id="fillerup" onclick="fillerup()" value="fillerup" class="n8" style="width:8em;height:4em" > 
+ 
+			<input type="button" id="goZero" onclick="goZero()" value="goZero" class="n8" style="width:8em;height:4em" > 
+			<br>
+			Leave edge: <input type="text" id="Lvedge" value="0.125" class="n12" style="width:44px;height:18px"> 
+					x	<input type="text" id="Lvedge10x" class="n6" style="width:11px;height:11px"> <br>
+				Left: 	<input type="text" id="Ledge" value="0.125" class="n12" style="width:44px;height:18px"> 
+					x	<input type="text" id="Ledge10x" class="n6" style="width:11px;height:11px"> <br>		
+				Right: 	<input type="text" id="Redge" value="0.125" class="n12" style="width:44px;height:18px"> 
+					x	<input type="text" id="Redge10x" class="n6" style="width:11px;height:11px"> <br>
+		Gripper bite: 	<input type="text" id="Gbite" value="0.375" class="n12" style="width:44px;height:18px"> 	
+					x	<input type="text" id="Gbite10x" class="n6" style="width:11px;height:11px"> <br>	
+		</td>
+	</tr>		
+<script>	
+	function getBleeds10x() {
+		var Lvedge = document.getElementById("Lvedge").value;
+		var Ledge = document.getElementById("Ledge").value;	
+		var Redge = document.getElementById("Redge").value;
+		var Gbite = document.getElementById("Gbite").value;		
+			document.getElementById("Lvedge10x").value = Lvedge * 10;
+			document.getElementById("Ledge10x").value = Ledge * 10;	
+			document.getElementById("Redge10x").value = Redge * 10;	
+			document.getElementById("Gbite10x").value = Gbite * 10;	
+		}
+
+	function fillerup() {	
+			document.getElementById("Lvedge").value = 0.125;
+			document.getElementById("Ledge").value = 0.125;	
+			document.getElementById("Redge").value = 0.125;	
+			document.getElementById("Gbite").value = 0.375;	
+		}
+	function goZero() {	
+			document.getElementById("Lvedge").value = 0;
+			document.getElementById("Ledge").value = 0;	
+			document.getElementById("Redge").value = 0;	
+			document.getElementById("Gbite").value = 0;	
+		}		
+</script>
+		
+<br>
+	<tr>		
+		<td colspan="4" style="border:2px solid #4DFFF7" >
+			(Non-editable) 
+			ssRow: 
+			<input type="text" id="ssRow" value="1" class="n26" style="width:44px;height:33px"> 						
+			ssCol:  
+			<input type="text" id="ssCol" value="1" class="n26" style="width:44px;height:33px"> 
+		</td >		
+	</tr>
+</table> 
+<br>
+
+<script>	
+//.........................................................................................
+	function draw_bledsizeRowCol() {	
+		var bsW10x = document.getElementById("bleedszW10x").value;	
+		var bsH10x = document.getElementById("bleedszH10x").value;	
+		var bledsizeCol = document.getElementById("bledsizeCol").value;
+		var bledsizeRow = document.getElementById("bledsizeRow").value;
+
+			var bsWd = bsW10x * bledsizeCol;	
+			var bsHt = bsH10x * bledsizeRow ;	
+			
+			document.getElementById("rectBleedsize").setAttribute("x", 0);		
+			document.getElementById("rectBleedsize").setAttribute("y", 0);
+			document.getElementById("rectBleedsize").setAttribute("width", bsWd);		
+			document.getElementById("rectBleedsize").setAttribute("height", bsHt);	
+			
+//	document.getElementById("getrunsizeColRow").click();	
+	
+		document.getElementById("line1v").setAttribute("x1", bsWd * 1);	
+		document.getElementById("line1v").setAttribute("y1", 0);
+		document.getElementById("line1v").setAttribute("x2", bsWd * 1);	
+		document.getElementById("line1v").setAttribute("y2", bsHt * 11);	
+		
+		document.getElementById("line2v").setAttribute("x1", bsWd * 2);		
+		document.getElementById("line2v").setAttribute("y1", 0);
+		document.getElementById("line2v").setAttribute("x2", bsWd * 2);		
+		document.getElementById("line2v").setAttribute("y2", bsHt * 11);
+
+		document.getElementById("line3v").setAttribute("x1", bsWd * 3);			
+		document.getElementById("line3v").setAttribute("y1", 0);
+		document.getElementById("line3v").setAttribute("x2", bsWd * 3);		
+		document.getElementById("line3v").setAttribute("y2", bsHt * 11);
+		
+		document.getElementById("line4v").setAttribute("x1", bsWd * 4);			
+		document.getElementById("line4v").setAttribute("y1", 0);
+		document.getElementById("line4v").setAttribute("x2", bsWd * 4);		
+		document.getElementById("line4v").setAttribute("y2", bsHt * 11);	
+		
+		document.getElementById("line5v").setAttribute("x1", bsWd * 5);			
+		document.getElementById("line5v").setAttribute("y1", 0);
+		document.getElementById("line5v").setAttribute("x2", bsWd * 5);		
+		document.getElementById("line5v").setAttribute("y2", bsHt * 11);
+		
+		document.getElementById("line6v").setAttribute("x1", bsWd * 6);			
+		document.getElementById("line6v").setAttribute("y1", 0);
+		document.getElementById("line6v").setAttribute("x2", bsWd * 6);		
+		document.getElementById("line6v").setAttribute("y2", bsHt * 11);	
+
+		document.getElementById("line7v").setAttribute("x1", bsWd * 7);			
+		document.getElementById("line7v").setAttribute("y1", 0);
+		document.getElementById("line7v").setAttribute("x2", bsWd * 7);	
+		document.getElementById("line7v").setAttribute("y2", bsHt * 11);		
+
+		document.getElementById("line8v").setAttribute("x1", bsWd * 8);		
+		document.getElementById("line8v").setAttribute("y1", 0);
+		document.getElementById("line8v").setAttribute("x2", bsWd * 8);	
+		document.getElementById("line8v").setAttribute("y2", bsHt * 11);	
+
+		document.getElementById("line9v").setAttribute("x1", bsWd * 9);			
+		document.getElementById("line9v").setAttribute("y1", 0);
+		document.getElementById("line9v").setAttribute("x2", bsWd * 9);	
+		document.getElementById("line9v").setAttribute("y2", bsHt * 11);	
+
+		document.getElementById("line10v").setAttribute("x1", bsWd * 10);			
+		document.getElementById("line10v").setAttribute("y1", 0);
+		document.getElementById("line10v").setAttribute("x2", bsWd * 10);	
+		document.getElementById("line10v").setAttribute("y2", bsHt * 11);	
+
+		document.getElementById("line11v").setAttribute("x1", bsWd * 11);		
+		document.getElementById("line11v").setAttribute("y1", 0);
+		document.getElementById("line11v").setAttribute("x2", bsWd * 11);	
+		document.getElementById("line11v").setAttribute("y2", bsHt * 11);	
+
+		document.getElementById("line12v").setAttribute("x1", bsWd * 12);		
+		document.getElementById("line12v").setAttribute("y1", 0);
+		document.getElementById("line12v").setAttribute("x2", bsWd * 12);	
+		document.getElementById("line12v").setAttribute("y2", bsHt * 11);	
+
+
+
+		document.getElementById("line1h").setAttribute("x1", 0);	
+		document.getElementById("line1h").setAttribute("y1", bsHt * 1);
+		document.getElementById("line1h").setAttribute("x2", bsWd * 11);	
+		document.getElementById("line1h").setAttribute("y2", bsHt * 1);		
+
+		document.getElementById("line2h").setAttribute("x1", 0);	
+		document.getElementById("line2h").setAttribute("y1", bsHt * 2);
+		document.getElementById("line2h").setAttribute("x2", bsWd * 11);	
+		document.getElementById("line2h").setAttribute("y2", bsHt * 2);	
+
+		document.getElementById("line3h").setAttribute("x1", 0);	
+		document.getElementById("line3h").setAttribute("y1", bsHt * 3);
+		document.getElementById("line3h").setAttribute("x2", bsWd * 11);	
+		document.getElementById("line3h").setAttribute("y2", bsHt * 3);	
+
+		document.getElementById("line4h").setAttribute("x1", 0);	
+		document.getElementById("line4h").setAttribute("y1", bsHt * 4);
+		document.getElementById("line4h").setAttribute("x2", bsWd * 11);	
+		document.getElementById("line4h").setAttribute("y2", bsHt * 4);	
+
+		document.getElementById("line5h").setAttribute("x1", 0);	
+		document.getElementById("line5h").setAttribute("y1", bsHt * 5);
+		document.getElementById("line5h").setAttribute("x2", bsWd * 11);	
+		document.getElementById("line5h").setAttribute("y2", bsHt * 5);	
+
+		document.getElementById("line6h").setAttribute("x1", 0);	
+		document.getElementById("line6h").setAttribute("y1", bsHt * 6);
+		document.getElementById("line6h").setAttribute("x2", bsWd * 11);	
+		document.getElementById("line6h").setAttribute("y2", bsHt * 6);	
+
+		document.getElementById("line7h").setAttribute("x1", 0);	
+		document.getElementById("line7h").setAttribute("y1", bsHt * 7);
+		document.getElementById("line7h").setAttribute("x2", bsWd * 11);	
+		document.getElementById("line7h").setAttribute("y2", bsHt * 7);		
+
+		document.getElementById("line8h").setAttribute("x1", 0);	
+		document.getElementById("line8h").setAttribute("y1", bsHt * 8);
+		document.getElementById("line8h").setAttribute("x2", bsWd * 11);	
+		document.getElementById("line8h").setAttribute("y2", bsHt * 8);	
+
+		document.getElementById("line9h").setAttribute("x1", 0);	
+		document.getElementById("line9h").setAttribute("y1", bsHt * 9);
+		document.getElementById("line9h").setAttribute("x2", bsWd * 11);	
+		document.getElementById("line9h").setAttribute("y2", bsHt * 9);	
+
+		document.getElementById("line10h").setAttribute("x1", 0);	
+		document.getElementById("line10h").setAttribute("y1", bsHt * 10);
+		document.getElementById("line10h").setAttribute("x2", bsWd * 11);	
+		document.getElementById("line10h").setAttribute("y2", bsHt * 10);	
+
+		document.getElementById("line11h").setAttribute("x1", 0);	
+		document.getElementById("line11h").setAttribute("y1", bsHt * 11);
+		document.getElementById("line11h").setAttribute("x2", bsWd * 11);	
+		document.getElementById("line11h").setAttribute("y2", bsHt * 11);	
+
+		document.getElementById("line12h").setAttribute("x1", 0);	
+		document.getElementById("line12h").setAttribute("y1", bsHt * 12);
+		document.getElementById("line12h").setAttribute("x2", bsWd * 11);	
+		document.getElementById("line12h").setAttribute("y2", bsHt * 12);			
+	}			
+</script>
+
+
+
+
+	<tr>
+		<td  style="border:2px solid #4DFFF7" > 
+			<svg width="777" height="555">
+			<rect id="rectShitsize" x="2" y="2" width="2" height="2" style="stroke:orange; fill:#e6ffcc;"/>				
+			<rect id="rectRunsize" x="2" y="2" width="2" height="2" style="stroke:blue; fill:#ffe6ff;"/>		
+			<rect id="rectBleedsize" x="2" y="2" width="2" height="2" style="stroke:magenta; fill:#E0FFFF;"/>
+			<rect id="rect_gbBleedsize" x="2" y="2" width="2" height="2" style="stroke:magenta; fill:red;"/>
+
+
+
+				<line id="line1v" x1="0" y1="0" x2="2" y2="2" style="stroke:#b3f0ff;stroke-width:1" />
+				<line id="line2v" x1="0" y1="0" x2="2" y2="2" style="stroke:#b3f0ff;stroke-width:1" />
+				<line id="line3v" x1="0" y1="0" x2="2" y2="2" style="stroke:#b3f0ff;stroke-width:1" />	
+				<line id="line4v" x1="0" y1="0" x2="2" y2="2" style="stroke:#b3f0ff;stroke-width:1" />
+				<line id="line5v" x1="0" y1="0" x2="2" y2="2" style="stroke:#b3f0ff;stroke-width:1" />
+				<line id="line6v" x1="0" y1="0" x2="2" y2="2" style="stroke:#b3f0ff;stroke-width:1" />	
+				<line id="line7v" x1="0" y1="0" x2="2" y2="2" style="stroke:#b3f0ff;stroke-width:1" />
+				<line id="line8v" x1="0" y1="0" x2="2" y2="2" style="stroke:#b3f0ff;stroke-width:1" />
+				<line id="line9v" x1="0" y1="0" x2="2" y2="2" style="stroke:#b3f0ff;stroke-width:1" />	
+				<line id="line10v" x1="0" y1="0" x2="2" y2="2" style="stroke:#b3f0ff;stroke-width:1" />
+				<line id="line11v" x1="0" y1="0" x2="2" y2="2" style="stroke:#b3f0ff;stroke-width:1" />
+				<line id="line12v" x1="0" y1="0" x2="2" y2="2" style="stroke:#b3f0ff;stroke-width:1" />									
+				<line id="line1h" x1="0" y1="0" x2="2" y2="2" style="stroke:#b3f0ff;stroke-width:1" />
+				<line id="line2h" x1="0" y1="0" x2="2" y2="2" style="stroke:#b3f0ff;stroke-width:1" />
+				<line id="line3h" x1="0" y1="0" x2="2" y2="2" style="stroke:#b3f0ff;stroke-width:1" />	
+				<line id="line4h" x1="0" y1="0" x2="2" y2="2" style="stroke:#b3f0ff;stroke-width:1" />
+				<line id="line5h" x1="0" y1="0" x2="2" y2="2" style="stroke:#b3f0ff;stroke-width:1" />
+				<line id="line6h" x1="0" y1="0" x2="2" y2="2" style="stroke:#b3f0ff;stroke-width:1" />	
+				<line id="line7h" x1="0" y1="0" x2="2" y2="2" style="stroke:#b3f0ff;stroke-width:1" />
+				<line id="line8h" x1="0" y1="0" x2="2" y2="2" style="stroke:#b3f0ff;stroke-width:1" />
+				<line id="line9h" x1="0" y1="0" x2="2" y2="2" style="stroke:#b3f0ff;stroke-width:1" />	
+				<line id="line10h" x1="0" y1="0" x2="2" y2="2" style="stroke:#b3f0ff;stroke-width:1" />
+				<line id="line11h" x1="0" y1="0" x2="2" y2="2" style="stroke:#b3f0ff;stroke-width:1" />
+				<line id="line12h" x1="0" y1="0" x2="2" y2="2" style="stroke:#b3f0ff;stroke-width:1" />		
+			<rect id="rect1row" x="2" y="2" width="2" height="2" style="stroke:magenta; fill:none;"/>
+			<rect id="rsrect1col" x="2" y="2" width="2" height="2" style="stroke:#b3f0ff; fill:none;"/>					
+			</svg>			
+		</td>			
+	</tr>	
+
+	
+
+
+<script>
+//this is for page 1...
+	function draw747() {	
+		var panel1 = document.getElementById("vfarLtopW10x").value;				
+		var panel2 = document.getElementById("farLtopW10x").value;	
+		var panel3 = document.getElementById("LtopW10x").value;	
+		var panel4 = document.getElementById("RtopW10x").value;		
+		var panel5 = document.getElementById("farRtopW10x").value;		
+		var panel6 = document.getElementById("vfarRtopW10x").value;	
+
+		var row1 = document.getElementById("vfarLtopH10x").value;	
+		var row2 = document.getElementById("vfarLtopxH10x").value;	
+		var row3 = document.getElementById("vfarLH10x").value;
+		var row4 = document.getElementById("vfarLbotxH10x").value;			
+		var row5 = document.getElementById("vfarLbotH10x").value;	
+
+		var a1 = +panel1 ;
+		var a2 = +panel1 + +panel2;
+		var a3 = +panel1 + +panel2 + +panel3;			
+		var a4 = +panel1 + +panel2 + +panel3 + +panel4;	
+		var a5 = +panel1 + +panel2 + +panel3 + +panel4 + +panel5;	
+		
+		var b1 = +row1;	
+		var b2 = +row1 + +row2;	
+		var b3 = +row1 + +row2 + +row3;
+		var b4 = +row1 + +row2 + +row3 + +row4;
+		
+//top		
+			document.getElementById("rect_vfarLtop").setAttribute("x", 0);		
+			document.getElementById("rect_vfarLtop").setAttribute("y", 0);
+			document.getElementById("rect_vfarLtop").setAttribute("width", panel1);		
+			document.getElementById("rect_vfarLtop").setAttribute("height", row1);
+			
+			document.getElementById("rect_farLtop").setAttribute("x", a1);		
+			document.getElementById("rect_farLtop").setAttribute("y", 0);
+			document.getElementById("rect_farLtop").setAttribute("width", panel2);		
+			document.getElementById("rect_farLtop").setAttribute("height", row1);
+		
+			document.getElementById("rect_Ltop").setAttribute("x", a2);		
+			document.getElementById("rect_Ltop").setAttribute("y", 0);
+			document.getElementById("rect_Ltop").setAttribute("width", panel3);		
+			document.getElementById("rect_Ltop").setAttribute("height", row1);				
+
+			document.getElementById("rect_Rtop").setAttribute("x", a3);		
+			document.getElementById("rect_Rtop").setAttribute("y", 0);
+			document.getElementById("rect_Rtop").setAttribute("width", panel4);		
+			document.getElementById("rect_Rtop").setAttribute("height", row1);	
+
+			document.getElementById("rect_farRtop").setAttribute("x", a4);		
+			document.getElementById("rect_farRtop").setAttribute("y", 0);
+			document.getElementById("rect_farRtop").setAttribute("width", panel5);		
+			document.getElementById("rect_farRtop").setAttribute("height", row1);	
+			
+			document.getElementById("rect_vfarRtop").setAttribute("x", a5);		
+			document.getElementById("rect_vfarRtop").setAttribute("y", 0);
+			document.getElementById("rect_vfarRtop").setAttribute("width", panel6);		
+			document.getElementById("rect_vfarRtop").setAttribute("height", row1);	
+						
+//x
+			document.getElementById("rect_vfarLtopx").setAttribute("x", 0);		
+			document.getElementById("rect_vfarLtopx").setAttribute("y", b1);
+			document.getElementById("rect_vfarLtopx").setAttribute("width", panel1);		
+			document.getElementById("rect_vfarLtopx").setAttribute("height", row2);
+				
+			document.getElementById("rect_farLtopx").setAttribute("x", a1);		
+			document.getElementById("rect_farLtopx").setAttribute("y", b1);
+			document.getElementById("rect_farLtopx").setAttribute("width", panel2);		
+			document.getElementById("rect_farLtopx").setAttribute("height", row2);
+		
+			document.getElementById("rect_Ltopx").setAttribute("x", a2);		
+			document.getElementById("rect_Ltopx").setAttribute("y", b1);
+			document.getElementById("rect_Ltopx").setAttribute("width", panel3);		
+			document.getElementById("rect_Ltopx").setAttribute("height", row2);				
+
+			document.getElementById("rect_Rtopx").setAttribute("x", a3);		
+			document.getElementById("rect_Rtopx").setAttribute("y", b1);
+			document.getElementById("rect_Rtopx").setAttribute("width", panel4);		
+			document.getElementById("rect_Rtopx").setAttribute("height", row2);	
+
+			document.getElementById("rect_farRtopx").setAttribute("x", a4);		
+			document.getElementById("rect_farRtopx").setAttribute("y", b1);
+			document.getElementById("rect_farRtopx").setAttribute("width", panel5);		
+			document.getElementById("rect_farRtopx").setAttribute("height", row2);	
+			
+			document.getElementById("rect_vfarRtopx").setAttribute("x", a5);		
+			document.getElementById("rect_vfarRtopx").setAttribute("y", b1);
+			document.getElementById("rect_vfarRtopx").setAttribute("width", panel6);		
+			document.getElementById("rect_vfarRtopx").setAttribute("height", row2);		
+//mid
+			document.getElementById("rect_vfarL").setAttribute("x", 0);		
+			document.getElementById("rect_vfarL").setAttribute("y", b2);
+			document.getElementById("rect_vfarL").setAttribute("width", panel1);		
+			document.getElementById("rect_vfarL").setAttribute("height", row3);
+				
+			document.getElementById("rect_farL").setAttribute("x", a1);		
+			document.getElementById("rect_farL").setAttribute("y", b2);
+			document.getElementById("rect_farL").setAttribute("width", panel2);		
+			document.getElementById("rect_farL").setAttribute("height", row3);
+		
+			document.getElementById("rect_L").setAttribute("x", a2);		
+			document.getElementById("rect_L").setAttribute("y", b2);
+			document.getElementById("rect_L").setAttribute("width", panel3);		
+			document.getElementById("rect_L").setAttribute("height", row3);				
+
+			document.getElementById("rect_R").setAttribute("x", a3);		
+			document.getElementById("rect_R").setAttribute("y", b2);
+			document.getElementById("rect_R").setAttribute("width", panel4);		
+			document.getElementById("rect_R").setAttribute("height", row3);	
+
+			document.getElementById("rect_farR").setAttribute("x", a4);		
+			document.getElementById("rect_farR").setAttribute("y", b2);
+			document.getElementById("rect_farR").setAttribute("width", panel5);		
+			document.getElementById("rect_farR").setAttribute("height", row3);	
+			
+			document.getElementById("rect_vfarR").setAttribute("x", a5);		
+			document.getElementById("rect_vfarR").setAttribute("y", b2);
+			document.getElementById("rect_vfarR").setAttribute("width", panel6);		
+			document.getElementById("rect_vfarR").setAttribute("height", row3);	
+//botx	
+			document.getElementById("rect_vfarLbotx").setAttribute("x", 0);		
+			document.getElementById("rect_vfarLbotx").setAttribute("y", b3);
+			document.getElementById("rect_vfarLbotx").setAttribute("width", panel1);		
+			document.getElementById("rect_vfarLbotx").setAttribute("height", row4);
+				
+			document.getElementById("rect_farLbotx").setAttribute("x", a1);		
+			document.getElementById("rect_farLbotx").setAttribute("y", b3);
+			document.getElementById("rect_farLbotx").setAttribute("width", panel2);		
+			document.getElementById("rect_farLbotx").setAttribute("height", row4);
+		
+			document.getElementById("rect_Lbotx").setAttribute("x", a2);		
+			document.getElementById("rect_Lbotx").setAttribute("y", b3);
+			document.getElementById("rect_Lbotx").setAttribute("width", panel3);		
+			document.getElementById("rect_Lbotx").setAttribute("height", row4);				
+
+			document.getElementById("rect_Rbotx").setAttribute("x", a3);		
+			document.getElementById("rect_Rbotx").setAttribute("y", b3);
+			document.getElementById("rect_Rbotx").setAttribute("width", panel4);		
+			document.getElementById("rect_Rbotx").setAttribute("height", row4);	
+
+			document.getElementById("rect_farRbotx").setAttribute("x", a4);		
+			document.getElementById("rect_farRbotx").setAttribute("y", b3);
+			document.getElementById("rect_farRbotx").setAttribute("width", panel5);		
+			document.getElementById("rect_farRbotx").setAttribute("height", row4);	
+			
+			document.getElementById("rect_vfarRbotx").setAttribute("x", a5);		
+			document.getElementById("rect_vfarRbotx").setAttribute("y", b3);
+			document.getElementById("rect_vfarRbotx").setAttribute("width", panel6);		
+			document.getElementById("rect_vfarRbotx").setAttribute("height", row4);				
+//bot	
+			document.getElementById("rect_vfarLbot").setAttribute("x", 0);		
+			document.getElementById("rect_vfarLbot").setAttribute("y", b4);
+			document.getElementById("rect_vfarLbot").setAttribute("width", panel1);		
+			document.getElementById("rect_vfarLbot").setAttribute("height", row5);
+				
+			document.getElementById("rect_farLbot").setAttribute("x", a1);		
+			document.getElementById("rect_farLbot").setAttribute("y", b4);
+			document.getElementById("rect_farLbot").setAttribute("width", panel2);		
+			document.getElementById("rect_farLbot").setAttribute("height", row5);
+		
+			document.getElementById("rect_Lbot").setAttribute("x", a2);		
+			document.getElementById("rect_Lbot").setAttribute("y", b4);
+			document.getElementById("rect_Lbot").setAttribute("width", panel3);		
+			document.getElementById("rect_Lbot").setAttribute("height", row5);				
+
+			document.getElementById("rect_Rbot").setAttribute("x", a3);		
+			document.getElementById("rect_Rbot").setAttribute("y", b4);
+			document.getElementById("rect_Rbot").setAttribute("width", panel4);		
+			document.getElementById("rect_Rbot").setAttribute("height", row5);	
+
+			document.getElementById("rect_farRbot").setAttribute("x", a4);		
+			document.getElementById("rect_farRbot").setAttribute("y", b4);
+			document.getElementById("rect_farRbot").setAttribute("width", panel5);		
+			document.getElementById("rect_farRbot").setAttribute("height", row5);	
+			
+			document.getElementById("rect_vfarRbot").setAttribute("x", a5);		
+			document.getElementById("rect_vfarRbot").setAttribute("y", b4);
+			document.getElementById("rect_vfarRbot").setAttribute("width", panel6);		
+			document.getElementById("rect_vfarRbot").setAttribute("height", row5);				
+		}
+
+</script> 
+
+
+</div>
+
+
+
+<div id="pg3" class="tabcontent" >
+
+
+
+<table style="width:88%" >
+	<a class="n20"> Offset Mach- </a> 
+	<tr>
+		<td class="n10" style="width:4%" >
+			1200.. <br>
+			<img src="arrowright.png"> <br>
+		</td>
+		
+		<td style="width:5%;  ; border:2px solid #4DFFF7; vertical-align:top">  
+			<input type="radio" name="heid" id="rad0c" style="width:22px;height:22px"> <br>  
+				Non- <br> Offset <br> (Digital) <br>
+		</td>
+		
+		<td style="width:19%;  ; border:2px solid #4DFFF7; vertical-align:top">  
+			<input type="radio" name="heid" id="rad1c" style="width:22px;height:22px"> <br> 
+				<img src="gray.png">	
+					Heidelberg GTO-46 <br>
+				<img src="gray.png">					
+					GTO-52 <br>
+				<img src="gray.png">					
+					Kor <br>
+				<img src="gray.png">			
+					Kora <br> <br>
+		</td>
+		
+		<td style="width:19%;  ; border:2px solid #4DFFF7; vertical-align:top"> 
+			<input type="radio" name="heid" id="rad2c" style="width:22px; height:22px"> <br>
+				<img src="gray.png">	
+					Heidelberg Kord-64 <br>
+				<img src="gray.png">				
+					Sork <br> <br>
+		</td>
+		
+		<td style="width:16%;  ; border:2px solid #4DFFF7; vertical-align:top">  
+			<input type="radio" name="heid" id="rad3c" style="width:22px; height:22px"> <br>
+				<img src="gray.png">	
+					Heidelberg Kors <br>
+				<img src="gray.png">				
+					Sorm <br> <br>
+		</td>	
+		
+		<td style="width:16%;  ; border:2px solid #4DFFF7; vertical-align:top">  
+			<input type="radio" name="heid" id="rad4c" style="width:22px; height:22px"> <br>
+				<img src="gray.png">	
+					Heidelberg Sord <br>
+				<img src="gray.png">					
+					Sors <br> <br>
+		</td>	
+		
+		<td style="text-align:left; border:2px solid #4DFFF7; vertical-align:top"> 
+			<input type="radio" name="heid" id="rad5c" style="width:22px; height:22px"> <br>
+				<img src="gray.png">	
+					Heidelberg SormZ <br>
+				<img src="gray.png">					
+					SordZ <br>
+				<img src="gray.png">				
+					SorsZ <br>
+		</td>					
+	</tr>	
+	
+	<tr>
+		<td class="n10" >
+			Ctp <br>
+			<img src="arrowright.png"> <br>
+		</td>
+		
+		<td style="text-align:left; border:2px solid #4DFFF7; vertical-align:top">  
+			..
+		</td>
+		
+		<td style="text-align:left; border:2px solid #4DFFF7; vertical-align:top">  
+			<input type="radio" name="heid" id="rad3c" style="width:22px; height:22px">
+				450 x 370 mm <br>
+			<input type="radio" name="heid" id="rad3c" style="width:22px; height:22px">			
+				510 x 400 mm <br>
+			<input type="radio" name="heid" id="rad3c" style="width:22px; height:22px">		
+				570 x 506 mm <br> <br>
+		</td>
+		
+		<td style="text-align:left; border:2px solid #4DFFF7; vertical-align:top">  
+			<input type="radio" name="heid" id="rad3c" style="width:22px; height:22px">
+				650 x 550 mm<br>
+		</td>
+		
+		<td style="text-align:left; border:2px solid #4DFFF7; vertical-align:top">  
+			<input type="radio" name="heid" id="rad3c" style="width:22px; height:22px">
+				724 x 615 mm <br>			
+		</td>
+		
+		<td style="text-align:left; border:2px solid #4DFFF7; vertical-align:top">  
+			<input type="radio" name="heid" id="rad3c" style="width:22px; height:22px">
+				895 x 715 mm<br>
+			<input type="radio" name="heid" id="rad3c" style="width:22px; height:22px"> 			
+				1030 x 770 mm <br>
+		</td>	
+		
+		<td style="text-align:left; border:2px solid #4DFFF7; vertical-align:top"> 
+			<input type="radio" name="heid" id="rad3c" style="width:22px; height:22px"> 
+				724 x 615 mm <br>
+			<input type="radio" name="heid" id="rad3c" style="width:22px; height:22px">	
+				895 x 715 mm <br>
+			<input type="radio" name="heid" id="rad3c" style="width:22px; height:22px">			
+				1030 x 770 mm <br>
+		</td>	
+	</tr>	
+	
+</table> 
+
+
+
+</div>
+
+
+
+
+
+
+<div id="pg4" class="tabcontent">
+
+<table style="width:88%"> 
+
+	<tr > 	
+		<td  >
+			..
+		</td>
+			<td style="width:128px; vertical-align:top" >
+				<input type="radio" name="dtp" id="Chk_card2" >
+					<img src="2card.png" style="width:28px;height:44px">
+			</td>  														
+			<td style="width:101px; vertical-align:top" >
+				<input type="radio" name="dtp" id="Chk_pad2" >
+					<img src="2pad.png" style="width:28px;height:44px">
+			</td>										
+			<td style="width:94px; vertical-align:top" >
+				<input type="radio" name="dtp" id="Chk_letterhead2" >
+					<img src="2letterhead.png" style="width:28px;height:44px">
+			</td>									
+			<td style="width:102px; vertical-align:top; text-align:center" >
+				<input type="radio" name="dtp" id="Chk_poster2" >
+					<img src="2poster.png" style="width:28px;height:44px">
+			</td>
+			<td style="width:106px; vertical-align:top" >
+				<input type="radio" name="dtp" id="Chk_ply2" >
+					<img src="2ply.png" style="width:28px;height:44px">
+			</td>
+			<td style="width:106px; vertical-align:top" >
+				<input type="radio" name="dtp" id="Chk_folder2" >
+					<img src="2folder.png" style="width:28px;height:44px">
+			</td>	
+			<td style="width:98px; vertical-align:top" >
+				<input type="radio" name="dtp" id="Chk_envelope2" >
+					<img src="2envelope.png" style="width:28px;height:44px">
+			</td>			
+			<td style="width:106px; vertical-align:top" >
+				<input type="radio" name="dtp" id="Chk_box2" >
+					<img src="2box.png" style="width:28px;height:44px">
+			</td>				
+			<td style="vertical-align:top" >
+				<input type="radio" name="dtp" id="Chk_pages2" >
+					<img src="2page.png" style="width:28px;height:44px">
+			</td>							
+	</tr>
+
+	<tr >	
+		<td class="n10" style="width:8%; vertical-align:top;  " >
+			Choose <br> sSize <br> 
+			<img src="arrowright.png">
+			Then choose <br> a divi 	<br> 
+		</td>
+		
+		<td valign="top" class="n10" style="text-align:left; border:2px solid #4DFFF7">  
+			<input type="radio" name="wttf" onclick="ab()" style="width:18px; height:18px" >			
+					<a class="n18"> 22.5x28.5 </a> <br> 
+					<img src="gray.png"> <a class="n14"> Specialty </a> <br> 		
+			<input type="radio" name="paper" onclick="chkSpecialpaper()" > Paper <br>				 
+			<input type="radio" name="paper" onclick="tt()" > Board <br>				 				 
+			<input type="radio" name="paper" onclick="tt()" > Vellum <br>
+			<input type="radio" name="paper" onclick="tt()"> Tag board <br>
+		</td>		
+			
+		<td valign="top" class="n10" style="text-align:left; border:2px solid #4DFFF7"> 
+			<input type="radio" name="wttf" onclick="twenty2x34()" style="width:18px; height:18px" > 
+				<a class="n18"> 22x34 </a> <br> 
+				<img src="gray.png"> <a class="n14"> Bond </a> <br> 
+			<input type="radio" name="paper" onclick="ee()" > #16 <br>	
+				<input type="radio" name="paper" onclick="ee()" > #18 <br>
+		</td>
+	
+		<td valign="top" class="n10" style="text-align:left; border:2px solid #4DFFF7"> 
+			<input type="radio" name="paper" onclick="DE()" style="width:18px; height:18px" >
+				<br>
+				<a class="n16"> Custom </a> <br>
+			<input type="radio" name="paper" onclick="DE()" style="width:18px; height:18px" >
+				<br>			
+				<a class="n16"> Pre-cut </a> <br> 
+						<input type="radio" name="paper" onclick="dd()" style="width:16px"> 
+							8.5x11 <br> 
+						<input type="radio" name="paper" onclick="dd()" style="width:16px"> 
+							A4 <br> 
+		</td>
+		
+		<td valign="top" class="n10" style="text-align:left; border:2px solid #4DFFF7">  
+			<input type="radio" name="wttf" onclick="twenty5x38()" style="width:18px; height:18px" > 
+				<a class="n18"> 25x38 </a> <br>	
+				<img src="gray.png"> <a class="n14"> Coated2s </a> <br> 
+				<img src="gray.png"> <a class="n14"> Paper </a> <br> 				
+			<input type="radio" name="paper" onclick="dd()" > #60 <br>	
+			<input type="radio" name="paper" onclick="dd()" > #70 <br>
+			<input type="radio" name="paper" onclick="dd()" > #80 <br>
+			<input type="radio" name="paper" onclick="dd()" > #120 <br>
+		</td>
+		
+		<td valign="top" class="n10" style="text-align:left; border:2px solid #4DFFF7">    
+			<input type="radio" name="wttf" onclick="twenty4x36()" style="width:18px; height:18px" > 
+				<a class="n18"> 24x36 </a> <br>
+				<img src="gray.png"> <a class="n14"> Carbonless </a> <br>
+			<input type="radio" name="paper" onclick="vv" > 
+				Top,Mid,Bot <br>
+			<input type="radio" name="paper" onclick="vv">	 
+				Bond,OS <br>
+			<input type="radio" name="paper" onclick="vv">	 
+				Bond,CBond <br>
+		</td>
+		
+		<td valign="top" class="n10" style="text-align:left; border:2px solid #4DFFF7">   
+			<input type="radio" name="wttf" onclick="twenty5x38()" style="width:18px; height:18px" > 
+				<a class="n18"> 25x38 </a> <br>		
+				<img src="gray.png"> <a class="n14"> Coated2S </a> <br>
+				<img src="gray.png"> <a class="n14"> Board </a> <br> 	
+			<input type="radio" name="paper" onclick="xxxx()" style="width:16px"> #160 <br>	
+			<input type="radio" name="paper" onclick="xxxx()" style="width:16px"> #180 <br>
+			<input type="radio" name="paper" onclick="xxxx()" style="width:16px"> #200 <br>
+			<input type="radio" name="paper" onclick="xxxx()" style="width:16px"> #220 <br>
+		</td>
+		
+		<td valign="top" class="n10" style="text-align:left; border:2px solid #4DFFF7">   
+			<input type="radio" name="paper" onclick="DE()" style="width:18px; height:18px" >
+				<br>
+				<a class="n16"> Custom </a> <br>
+			<input type="radio" name="paper" onclick="DE()" style="width:18px; height:18px" >
+				<br>			
+				<a class="n16"> Pre-made </a> <br> 
+					<input type="radio" name="paper" onclick="dd()" style="width:16px"> 
+						<a class="n12"> 500s <br>
+						<img src="blnk.png">(ream) </a>
+		</td>
+	
+		<td valign="top" class="n10" style="text-align:left; border:2px solid #4DFFF7">   
+			<input type="radio" name="wttf" onclick="thirty1x43()" style="width:18px; height:18px" > 
+				<a class="n18"> 31x43 </a> <br>
+				<img src="gray.png"> <a class="n14"> Foldcote </a> <br>
+			<input type="radio" name="paper" onclick="nn()" style="width:16px"> #10<br>				
+			<input type="radio" name="paper" onclick="nn()" style="width:16px">  #12<br>				
+			<input type="radio" name="paper" onclick="nn()" style="width:16px">  #15<br>			
+			<input type="radio" name="paper" onclick="nn()" style="width:16px">  #18<br>				
+		</td>
+
+		<td valign="top" class="n10" style="text-align:left; border:2px solid #4DFFF7"> 
+			<input type="radio" name="wttf" onclick="twenty8x34()" style="width:18px; height:18px" > 
+				<a class="n18"> 28x34 </a> <br>
+				<img src="gray.png"> <a class="n14"> Bookpaper </a> <br> 			
+			<input type="radio" name="paper" onclick="nn" style="width:16px">  #40<br>					
+			<input type="radio" name="paper" onclick="nn" style="width:16px">  #50<br>				
+			<input type="radio" name="paper" onclick="nn" style="width:16px">  #60<br>					
+			<input type="radio" name="paper" onclick="nn" style="width:16px">  #70<br>
+		</td>		
+	</tr>	
+</table>		
+<br>
+
+</div>
+
+<div id="pg5" class="tabcontent">
+5
+</div>
+
+<div id="pg6" class="tabcontent">
+6
+</div>
+
+<div id="pg7" class="tabcontent">
+7
+</div>
+
+
+<div id="pg8" class="tabcontent">
+		<br>				
+		<img id="xycard" src="xycard.png">	
+		<img id="xypad" src="xypad.png">	
+		<img id="xyletterhead" src="xyletterhead.png">	
+		<img id="xyposter" src="xyposter.png">	
+
+		<img id="xyfolder" src="xyfolder.png">
+		<img id="xyenvelope" src="xyenvelope.png">
+		<img id="xybox" src="xybox.png">
+		<img id="xyply" src="xyply.png">
+		<img id="xypage" src="xypage.png"> 
+		<br>	
+		<img id="digioffset" src="digioffset.png">	<br> 
+
+
+	 	<input type="button" id="tenx" onclick="tenx()" value="10x" class="n10" style="width:3em;height:3em">		
+		<input type="button" id="draw747" onclick="draw747()" value="d747" class="n10" style="width:3em;height:3em"> 			
+		<input type="button" id="bleedH" onclick="bleedH()" value="hh" class="n10" style="width:3em;height:3em"> 
+		<input type="button" id="bleedW" onclick="bleedW()" value="ww" class="n10" style="width:3em;height:3em"> <br>
+			/
+			<input   id="vfarLtopW10x" class="n10" style="width:3em"> 				
+			<input   id="farLtopW10x" class="n10" style="width:3em"> 	
+			<input   id="LtopW10x" class="n10" style="width:3em">
+			<input   id="RtopW10x" class="n10" style="width:3em"> 
+			<input   id="farRtopW10x" class="n10" style="width:3em"> 			
+			<input   id="vfarRtopW10x" class="n10" style="width:3em"> 
+			//
+			<input   id="vfarLtopH10x" class="n10" style="width:3em"> 
+			<input   id="vfarLtopxH10x" class="n10" style="width:3em"> 
+			<input   id="vfarLH10x" class="n10" style="width:3em"> 
+			<input   id="vfarLbotxH10x" class="n10" style="width:3em"> 
+			<input   id="vfarLbotH10x" class="n10" style="width:3em"> 	
+
+<br>
+
+			<br>
+			detotextbox	
+				<input type="text" id="detotextbox" aria-label="" style="width:16em" >			
+				<br>	
+		</td>
+		<td>
+			inputTextToSave <textarea id="inputTextToSave" cols="9" rows="9"> </textarea>
+
+			
+</div>
+
+
+
+
+
+
+<script src="main.js"></script>
+<script src="paperdivi.js"></script>  
+<script src="updateArtwork.js"></script>  
+<script src="magnislider.js"></script>  
+<script src="complexi_slider.js"></script>  
+</body>
+
+
+
+<style>
+
+
+table {
+	font-family: Helvetica; 
+	font-size: 16px;
+	border-collapse: collapse;
+}
+
+td, tr {
+	border: 1px solid #cyan; 
+	padding: 1px;
+}
+.n6 	{
+	font-size: 7px;
+}
+.n8 	{
+	font-size: 9px;
+}
+.n10 	{
+	font-size: 11px;
+}
+.n12 	{
+	font-size: 13px;
+}
+.n14 	{
+	font-size: 15px; 
+}
+.n16 	{
+	font-size: 17px; 
+}
+.n18 	{
+	font-size: 19px; 
+}
+.n20	{
+	font-size: 21px; 
+}
+.n22	{
+	font-size: 23px; font-style: bold;
+}
+.n24 	{
+	font-size: 25px;
+}
+.n26 	{
+	font-size: 27px;
+}
+.n28 	{
+	font-size: 29px;
+}
+.n30 	{
+	font-size: 31px;
+}
+
+.i10 	{
+	font-size: 11px; font-style: italic;
+}
+.i12 	{
+	font-size: 13px; font-style: italic;
+}
+.i14 	{
+	font-size: 15px; font-style: italic;
+}
+.i16 	{
+	font-size: 17px; font-style: italic;
+}
+.i18 	{
+	font-size: 19px; font-style: italic;
+}
+.i20	{
+	font-size: 21px; font-style: italic;
+}
+.i22	{
+	font-size: 23px; font-style: italic;
+}
+.i24 	{
+	font-size: 25px; font-style: italic;
+}
+</style>
+
+
+<style>
+/* The container */
+.container {
+	  display: block;
+	  position: relative;
+	  padding-left: 35px;
+	  margin-bottom: 4px;
+	  cursor: pointer;
+	  font-size: 22px;
+	  -webkit-user-select: none;
+	  -moz-user-select: none;
+	  -ms-user-select: none;
+	  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+	  position: absolute;
+	  opacity: 0;
+	  cursor: pointer;
+	  height: 0;
+	  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  height: 25px;
+	  width: 25px;
+	  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+	background-color: #ccc;
+	  width: 300px;
+	    height: 300px;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+	background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+	  content: "";
+	  position: absolute;
+	  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+	display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+	  left: 9px;
+	  top: 5px;
+	  width: 5px;
+	  height: 10px;
+	  border: solid white;
+	  border-width: 0 3px 3px 0;
+	  -webkit-transform: rotate(45deg);
+	  -ms-transform: rotate(45deg);
+	  transform: rotate(45deg);
+}
+</style>
+
+<style>
+div.fileinputs {
+	position: relative;
+}
+
+div.fakefile {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+}
+
+input.file {
+	position: relative;
+	text-align: right;
+	-moz-opacity:0 ;
+	filter:alpha(opacity: 0);
+	opacity: 0;
+	z-index: 2;
+}
+</style>
+
+
+
+			
+
+</html> 
