@@ -1,7 +1,15 @@
 ## Welcome to GitHub Pages vvvtest!
 
 You can use the [editor on GitHub](https://github.com/xeleritas/github.io/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+			<input type="text" id="qtyTotal" class="n16" onchange="xxx()" style="width:6em;height:33px">			
+			<i> (imp.) </i>		
+			<input type="button" id="computeQtyTotal" class="n12" onclick="computeQtyTotal()" value="run" style="width:3em;height:2em" >																	
+			<img src="gray.png">
 
+			<br>
+			<input type="range" min="1" max="1234" value="1" class="slider" id="myRange" style="width:99%" > <br>
+      
+      
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
 ### Markdown
